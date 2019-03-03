@@ -1,0 +1,39 @@
+/**
+ * Created	by	chenshi  at	2018年1月5日 下午1:33:21
+ */
+package com.cmss.dytt.common.web.exception;
+
+import org.springframework.dao.DataAccessException;
+
+/**
+ * @description: ServiceException.java
+ * @packageName: com.quanhu.base.exception
+ * @projectName: quanhu-base
+ * @revision: v1.0.0
+ * @author: chenshi
+ */
+public class ServiceException extends DataAccessException {
+
+    /***/
+    private static final long serialVersionUID = -7137961117203665574L;
+
+    private String message;
+
+    /**
+     * @param message
+     */
+    public ServiceException(String message) {
+        super(message);
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+}
