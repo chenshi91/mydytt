@@ -53,6 +53,7 @@ public class DemoController extends BaseController<Demo> {
 //        LogUtil
         HashMap[] map=new HashMap[5];
         map[5].put("1","2");
+
         return new ResponseResult("cdhhgh");
     }
 
