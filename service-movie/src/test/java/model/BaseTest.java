@@ -83,11 +83,11 @@ public abstract class BaseTest {
         //获取json入参
         JSONObject requestParams = getJsonByUrl(requestJsonUrl);
         //发送http请求
-        logger.info("1,发送请求url:" + url + ",入参:" + requestParams);
+        logger.info("1,发送请求url:{},入参:{}", url, requestParams);
         httpEntity = new HttpEntity<>(requestParams, httpHeaders);
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, httpMethod, httpEntity, String.class, uriValiables);
         String responseResult = responseEntity.getBody();
-        logger.info("2,发送请求url:" + url + ",出参:" + responseResult);
+        logger.info("2,发送请求url:{},出参:{}", url, responseResult);
         JSONObject response = JSONObject.parseObject(responseResult);
         //检查出参格式
         checkResponseResult(response);

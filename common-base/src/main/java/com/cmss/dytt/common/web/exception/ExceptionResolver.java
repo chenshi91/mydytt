@@ -4,7 +4,6 @@ package com.cmss.dytt.common.web.exception;
 import com.alibaba.fastjson.JSONObject;
 import com.cmss.dytt.common.web.utils.SendMailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.mail.MailException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -27,7 +26,7 @@ public class ExceptionResolver {
     public Object exceptionHandler1(RuntimeException exception, HttpServletRequest request, HttpServletResponse response) {
         JSONObject errorResult = new JSONObject();
 
-        if (exception instanceof DataAccessException) {
+        if (exception instanceof RuntimeException) {
             //dao层出现异常
             errorResult.put("code", "947001");
             errorResult.put("msg", "数据库操作出现异常");

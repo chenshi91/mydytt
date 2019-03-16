@@ -3,8 +3,6 @@
  */
 package com.cmss.dytt.common.web.exception;
 
-import org.springframework.dao.DataAccessException;
-
 /**
  * @description: ServiceException.java
  * @packageName: com.quanhu.base.exception
@@ -12,7 +10,7 @@ import org.springframework.dao.DataAccessException;
  * @revision: v1.0.0
  * @author: chenshi
  */
-public class ServiceException extends DataAccessException {
+public class ServiceException extends RuntimeException {
 
     /***/
     private static final long serialVersionUID = -7137961117203665574L;

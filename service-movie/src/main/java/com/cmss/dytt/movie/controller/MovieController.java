@@ -2,11 +2,15 @@
 package com.cmss.dytt.movie.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cmss.dytt.common.web.mvc.BaseController;
+import com.cmss.dytt.common.web.mvc.BaseService;
+import com.cmss.dytt.common.web.mvc.ResponseResult;
 import com.cmss.dytt.movie.entity.Movie;
-import com.cmss.dytt.movie.service.BaseService;
 import com.cmss.dytt.movie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -19,9 +23,10 @@ import java.util.Enumeration;
 public class MovieController extends BaseController<Movie> {
 
     @Override
-    BaseService getService() {
+    protected BaseService<Movie> getService() {
         return movieService;
     }
+
 
     @Autowired
     MovieService movieService;
@@ -73,5 +78,24 @@ public class MovieController extends BaseController<Movie> {
         return result;
     }
 
+
+    @GetMapping(value = {"/list"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
+    public ResponseResult list() {
+        ResponseResult list = super.list();
+        return list;
+    }
+
+    @GetMapping(value = {"/list/{pageNo}/{pageSize}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
+    public ResponseResult listWithPage(@PathVariable int  pageNo,@PathVariable int  pageSize) {
+        Movie movie = new Movie();
+        ResponseResult list = super.list(pageNo, pageSize, movie);
+//        ResponseResult responseResult = movieService.listByPage(pageNo, pageSize, movie);
+        return list;
+    }
+
+    @GetMapping(value = {"/selectById/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
+    public ResponseResult selectById(@PathVariable Long id) {
+        return super.detail(id);
+    }
 
 }

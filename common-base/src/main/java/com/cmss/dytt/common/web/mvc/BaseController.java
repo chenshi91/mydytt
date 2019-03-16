@@ -1,6 +1,8 @@
 /* created by chenshi at 2018-11-16 */
 package com.cmss.dytt.common.web.mvc;
 
+import com.github.pagehelper.PageInfo;
+
 import java.util.List;
 
 public abstract class BaseController<T> {
@@ -26,6 +28,16 @@ public abstract class BaseController<T> {
     public ResponseResult list() {
         List list = getService().selectByCondition(null);
         return new ResponseResult(list);
+    }
+
+    /**
+     * 分页查询
+     *
+     * @return
+     */
+    public ResponseResult list(int pageNo, int pageSize,T t) {
+        PageInfo<T> pageInfo = getService().selectByConditionWithPage(pageNo, pageSize, t);
+        return new ResponseResult(pageInfo);
     }
 
     /**

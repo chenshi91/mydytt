@@ -4,7 +4,8 @@ package com.cmss.dytt.common.web.mvc;
 
 import com.cmss.dytt.common.web.exception.ServiceException;
 import com.cmss.dytt.common.web.log.AddLog;
-import org.springframework.dao.DataAccessException;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     public void deleteByPrimaryKey(Long id) throws ServiceException {
         try {
             getMapper().deleteByPrimaryKey(id);
-        } catch (DataAccessException e) {
+        } catch (RuntimeException e) {
             e.printStackTrace();
             throw new ServiceException("-----deleteByPrimaryKey()-----sql执行出现异常:"+e.getMessage());
         }
@@ -28,7 +29,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     public void insert(T record) throws ServiceException {
         try {
             getMapper().insert(record);
-        } catch (DataAccessException e) {
+        } catch (RuntimeException e) {
             e.printStackTrace();
             throw new ServiceException("-----insert()-----sql执行出现异常:"+e.getMessage());
         }
@@ -50,6 +51,14 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     @Override
     public List<T> selectByCondition(T object) throws ServiceException {
         return getMapper().selectByCondition(object);
+    }
+
+    @AddLog
+    @Override
+    public PageInfo<T> selectByConditionWithPage(int pageNo, int pageSize, T t) throws ServiceException {
+        PageHelper.startPage(pageNo,pageSize);
+        List<T> list = getMapper().selectByCondition(t);
+        return new PageInfo<T>(list);
     }
 
     ;

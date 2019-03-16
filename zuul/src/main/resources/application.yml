@@ -17,13 +17,16 @@ zuul:
     api-demo:
       path: /api-demo/**
       serviceId: service-demo
+    api-movie:
+      path: /api-movie/**
+      serviceId: service-movie
   retryable: true
 
 ribbon:
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 1
-  ReadTimeout: 1500
-  ConnectTimeout: 1500
+  ReadTimeout: 3500
+  ConnectTimeout: 3500
 
 hystrix:
     command:

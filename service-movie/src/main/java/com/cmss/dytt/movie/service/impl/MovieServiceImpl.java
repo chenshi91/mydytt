@@ -1,10 +1,14 @@
 /* created by chenshi at 2018-11-10 */
 package com.cmss.dytt.movie.service.impl;
 
-import com.cmss.dytt.movie.dao.BaseDao;
+import com.cmss.dytt.common.web.mvc.BaseMapper;
+import com.cmss.dytt.common.web.mvc.BaseServiceImpl;
+import com.cmss.dytt.common.web.mvc.ResponseResult;
 import com.cmss.dytt.movie.dao.MovieMapper;
 import com.cmss.dytt.movie.entity.Movie;
 import com.cmss.dytt.movie.service.MovieService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
@@ -12,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 @Service
@@ -23,10 +28,7 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     @Resource
     MovieMapper movieMapper;
 
-    @Override
-    BaseDao getMapper() {
-        return movieMapper;
-    }
+
 
 
     @Async(value = "movieThreadPool")
@@ -39,5 +41,18 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
             e.printStackTrace();
         }
         logger.info("end ------async()");
+    }
+
+    @Override
+    public ResponseResult listByPage(int pageNo, int pageSize, Movie movie) {
+        PageHelper.startPage(pageNo,pageSize);
+        List<Movie> list = movieMapper.selectByCondition(movie);
+        return new ResponseResult(new PageInfo<Movie>(list));
+    }
+
+
+    @Override
+    protected BaseMapper<Movie> getMapper() {
+        return movieMapper;
     }
 }

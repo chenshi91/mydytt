@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserServiceHystric implements UserService {
     @Override
-    public JSONObject hi() {
+    public JSONObject hi(Long   id) {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("error", "断路器起效了");
         return jsonObject;

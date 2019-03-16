@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      >
+<head>
+    <meta charset="UTF-8">
+    <title>电影天堂</title>
+</head>
+<body>
+<h1></h1>
+
+<h2>
+    <span th:text="${result.msg}"></span><br>
+    <span th:text="${result.code}"></span><br>
+    <span th:text="${result.port}"></span><br>
+    <span th:text="${result.applicationName}"></span><br>
+    <span th:text="${result.data.total}"></span>
+    <div>
+        <ul>
+            <li  th:each="entity:${result.data.list}">
+                <span th:text="${entity.id}"></span>&nbsp;
+                <span th:text="${entity.name}"></span>-
+                <span th:text="${entity.title}"></span>-
+                <span th:text="${entity.downloadLink}"></span>
+                <span th:text='${entity.imgUrl}'></span>
+                <img src="<span th:text='${entity.imgUrl}'></span>">
+            </li>
+        </ul>
+        <!--<img src="https://img.18qweasd.com/d/file/html/gndy/dyzz/2019-03-11/33c8b138950136b4e020cc1232bc3370.jpg">-->
+
+    </div>
+</h2>
+</body>
+</html>
