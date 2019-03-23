@@ -3,17 +3,9 @@ package com.cmss.test.demo;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.cmss.dytt.common.web.test.BaseTest;
-import com.cmss.dytt.common.web.utils.JsonUtil;
+import com.dytt.common.model.test.BaseTest;
+import com.dytt.common.model.utils.JsonUtil;
 import org.junit.Test;
-import org.springframework.util.StringUtils;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
 
 public class Demo extends BaseTest {
 
@@ -108,6 +100,6 @@ public class Demo extends BaseTest {
 
     @Override
     protected String getIpHost() {
-        return "http://localhost:8087";
+        return "http://localhost:3000";
     }
 }

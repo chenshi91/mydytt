@@ -2,8 +2,8 @@
 package com.cmss.mydytt;
 
 import com.alibaba.fastjson.JSONObject;
-import com.cmss.dytt.common.web.mvc.BaseController;
-import com.cmss.dytt.common.web.mvc.BaseService;
+import com.dytt.common.model.mvc.BaseController;
+import com.dytt.common.model.mvc.BaseService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;

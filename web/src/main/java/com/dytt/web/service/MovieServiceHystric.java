@@ -1,8 +1,7 @@
 /* created by chenshi at 2019-02-26 */
 package com.dytt.web.service;
 
-import com.alibaba.fastjson.JSONObject;
-import com.cmss.dytt.common.web.mvc.ResponseResult;
+import com.dytt.common.model.mvc.ResponseResult;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableAsync
 @MapperScan(basePackages = {"com.cmss.test.mvc.mapper"})
-@ComponentScan(basePackages = {"com.cmss.dytt.common.web","com.cmss.test.mvc"})
+@ComponentScan(basePackages = {"com.cmss"})
 @SpringBootApplication
 @EnableEurekaClient
 public class TestApplication {

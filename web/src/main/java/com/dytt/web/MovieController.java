@@ -2,10 +2,8 @@
 package com.dytt.web;
 
 import com.alibaba.fastjson.JSONObject;
-import com.cmss.dytt.common.web.mvc.ResponseResult;
 import com.dytt.web.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,6 +37,7 @@ public class MovieController {
         JSONObject list = result.getBody();
 //        ResponseResult list = movieService.listWithPage(pageNo,pageSize);
         request.setAttribute("result",list);
+        request.setAttribute("chen","shi");
         if (!list.getString("code").equals("000000")) {
             return "error";
         }
@@ -51,7 +50,8 @@ public class MovieController {
         ResponseEntity<JSONObject> result = restTemplate.getForEntity(
                 "http://ZUUL/api-movie/selectById/"+id, JSONObject.class);
 //        ResponseResult entity = movieService.selectById(id);
-        model.addAttribute("result",result.getBody());
+        JSONObject data = result.getBody().getJSONObject("data");
+        model.addAttribute("result",data);
         if (!result.getBody().getString("code").equals("000000")) {
             return "error";
         }

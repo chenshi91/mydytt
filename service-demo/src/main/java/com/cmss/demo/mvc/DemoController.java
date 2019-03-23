@@ -1,10 +1,9 @@
 /* created by chenshi at 2019-02-02 */
 package com.cmss.demo.mvc;
 
-import com.alibaba.fastjson.JSONObject;
-import com.cmss.dytt.common.web.mvc.BaseController;
-import com.cmss.dytt.common.web.mvc.BaseService;
-import com.cmss.dytt.common.web.mvc.ResponseResult;
+import com.dytt.common.model.mvc.BaseController;
+import com.dytt.common.model.mvc.BaseService;
+import com.dytt.common.model.mvc.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

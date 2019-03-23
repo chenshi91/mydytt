@@ -1,7 +1,7 @@
 package com.cmss.demo.mvc;
 
 
-import com.cmss.dytt.common.web.mvc.IdEntity;
+import com.dytt.common.model.mvc.IdEntity;
 
 import java.util.Date;
 

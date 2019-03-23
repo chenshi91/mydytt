@@ -46,7 +46,7 @@ public class Movie extends BaseTest {
             this.content = new StringBuffer();
             getNodes(childNodes);
         }
-        com.cmss.dytt.movie.entity.Movie requestParams = getOneMovieRequest();
+        com.dytt.movie.entity.Movie requestParams = getOneMovieRequest();
         //发送http请求
         super.httpEntity = new HttpEntity<>(requestParams, httpHeaders);
         ResponseEntity<JSONObject> responseEntity = restTemplate.exchange("/insert", HttpMethod.POST, httpEntity, JSONObject.class, "");
@@ -91,7 +91,7 @@ public class Movie extends BaseTest {
                 this.content = new StringBuffer();
                 getNodes(childNodes);
             }
-            com.cmss.dytt.movie.entity.Movie requestParams = getOneMovieRequest();
+            com.dytt.movie.entity.Movie requestParams = getOneMovieRequest();
             //发送http请求
             super.httpEntity = new HttpEntity<>(requestParams, httpHeaders);
             ResponseEntity<JSONObject> responseEntity = null;
@@ -118,7 +118,7 @@ public class Movie extends BaseTest {
 
     }
 
-    private com.cmss.dytt.movie.entity.Movie getOneMovieRequest() {
+    private com.dytt.movie.entity.Movie getOneMovieRequest() {
         StringBuffer downUrl = new StringBuffer();//下载链接
         for (Node node : bodyNodes) {
             if (((Element) node).attr("href").contains("ftp://")) {
@@ -159,7 +159,7 @@ public class Movie extends BaseTest {
         String awards = null;//获奖情况
 
         if (!this.content.toString().contains(",")) {
-            return new com.cmss.dytt.movie.entity.Movie();
+            return new com.dytt.movie.entity.Movie();
         }
         String[] split = this.content.toString().split(",");
         for (String string : split) {
@@ -203,7 +203,7 @@ public class Movie extends BaseTest {
 
 
         }
-        com.cmss.dytt.movie.entity.Movie movie = new com.cmss.dytt.movie.entity.Movie();
+        com.dytt.movie.entity.Movie movie = new com.dytt.movie.entity.Movie();
         movie.setTitle(this.title);//标题
         movie.setName(name);
         movie.setName2(name2);

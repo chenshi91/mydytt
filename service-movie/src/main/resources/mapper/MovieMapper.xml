@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cmss.dytt.movie.dao.MovieMapper">
-    <resultMap id="BaseResultMap" type="com.cmss.dytt.movie.entity.Movie">
+<mapper namespace="com.dytt.movie.dao.MovieMapper">
+    <resultMap id="BaseResultMap" type="com.dytt.movie.entity.Movie">
         <id column="id" jdbcType="BIGINT" property="id"/>
         <result column="create_user_id" jdbcType="INTEGER" property="createUserId"/>
         <result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>
@@ -41,7 +41,7 @@
         from gcdy_movie
         where id = #{id,jdbcType=BIGINT}
     </select>
-    <select id="selectByCondition" parameterType="com.cmss.dytt.movie.entity.Movie" resultMap="BaseResultMap">
+    <select id="selectByCondition" parameterType="com.dytt.movie.entity.Movie" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from gcdy_movie
@@ -62,7 +62,7 @@
     delete from gcdy_movie
     where id = #{id,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.cmss.dytt.movie.entity.Movie">
+    <insert id="insert" parameterType="com.dytt.movie.entity.Movie">
     insert into gcdy_movie (id, create_user_id, create_date, 
       last_update_user_id, last_update_date, title, 
       name, name2, age, place_of_origin, 
@@ -82,7 +82,7 @@
       #{summary,jdbcType=VARCHAR}, #{awards,jdbcType=VARCHAR}, #{downloadLink,jdbcType=VARCHAR}, 
       #{imgUrl,jdbcType=VARCHAR})
   </insert>
-    <insert id="insertSelective" parameterType="com.cmss.dytt.movie.entity.Movie">
+    <insert id="insertSelective" parameterType="com.dytt.movie.entity.Movie">
         insert into gcdy_movie
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -245,7 +245,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.cmss.dytt.movie.entity.Movie">
+    <update id="updateByPrimaryKeySelective" parameterType="com.dytt.movie.entity.Movie">
         update gcdy_movie
         <set>
             <if test="createUserId != null">
@@ -326,7 +326,7 @@
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.cmss.dytt.movie.entity.Movie">
+    <update id="updateByPrimaryKey" parameterType="com.dytt.movie.entity.Movie">
     update gcdy_movie
     set create_user_id = #{createUserId,jdbcType=INTEGER},
       create_date = #{createDate,jdbcType=TIMESTAMP},

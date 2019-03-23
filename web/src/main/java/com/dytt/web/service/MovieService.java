@@ -1,6 +1,6 @@
 package com.dytt.web.service;
 
-import com.cmss.dytt.common.web.mvc.ResponseResult;
+import com.dytt.common.model.mvc.ResponseResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

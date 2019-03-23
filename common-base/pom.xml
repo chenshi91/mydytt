@@ -53,6 +53,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--注解@get,@set-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

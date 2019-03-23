@@ -2,8 +2,8 @@
 package com.cmss.demo.mvc;
 
 import com.cmss.demo.mvc.mapper.DemoMapper;
-import com.cmss.dytt.common.web.mvc.BaseMapper;
-import com.cmss.dytt.common.web.mvc.BaseServiceImpl;
+import com.dytt.common.model.mvc.BaseMapper;
+import com.dytt.common.model.mvc.BaseServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
