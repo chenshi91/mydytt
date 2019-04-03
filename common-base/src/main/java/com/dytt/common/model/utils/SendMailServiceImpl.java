@@ -56,7 +56,7 @@ public class SendMailServiceImpl implements SendMailService {
         }
         message.setFrom(mailFrom);
         message.setSubject(mailTitle);
-        message.setText(exceptionMsg!=null?exceptionMsg.toJSONString():exception.getMessage());
+        message.setText(exceptionMsg != null ? exceptionMsg.toJSONString() : exception.getMessage());
         this.sendMail(message);
     }
 }

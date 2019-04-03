@@ -1,4 +1,4 @@
-package com.cmss.test.mvc;
+package com.dytt.test.mvc;
 
 
 import com.dytt.common.model.mvc.IdEntity;
@@ -16,7 +16,7 @@ public class Demo extends IdEntity {
 
     private String createBy;
 
-    @JsonFormat(pattern = "YYYY-MM-DD HH:mm:ss",timezone = "")
+    @JsonFormat(pattern = "YYYY-MM-DD HH:mm:ss", timezone = "")
     private Date updateDate;
 
     private String updateBy;

@@ -35,7 +35,7 @@ public abstract class BaseController<T> {
      *
      * @return
      */
-    public ResponseResult list(int pageNo, int pageSize,T t) {
+    public ResponseResult list(int pageNo, int pageSize, T t) {
         PageInfo<T> pageInfo = getService().selectByConditionWithPage(pageNo, pageSize, t);
         return new ResponseResult(pageInfo);
     }

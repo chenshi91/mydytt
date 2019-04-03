@@ -86,7 +86,7 @@ public class MovieController extends BaseController<Movie> {
     }
 
     @GetMapping(value = {"/list/{pageNo}/{pageSize}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
-    public ResponseResult listWithPage(@PathVariable int  pageNo,@PathVariable int  pageSize) {
+    public ResponseResult listWithPage(@PathVariable int pageNo, @PathVariable int pageSize) {
         Movie movie = new Movie();
         ResponseResult list = super.list(pageNo, pageSize, movie);
 //        ResponseResult responseResult = movieService.listByPage(pageNo, pageSize, movie);

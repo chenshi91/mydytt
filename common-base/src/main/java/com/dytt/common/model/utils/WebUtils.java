@@ -21,13 +21,13 @@ public class WebUtils {
         return requestAttributes == null ? null : ((ServletRequestAttributes) requestAttributes).getResponse();
     }
 
-    public String getRequestId() {
+    public static String getRequestId() {
         Object requestId = getRequest().getAttribute(WebConstance.REQUEST_ID);
         if (requestId == null) {
             requestId = System.currentTimeMillis();
             getRequest().setAttribute(WebConstance.REQUEST_ID, requestId);
         }
-        return requestId.toString();
+        return "" + requestId;
     }
 
 }

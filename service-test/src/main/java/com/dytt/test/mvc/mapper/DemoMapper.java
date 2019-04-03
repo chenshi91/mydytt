@@ -1,7 +1,7 @@
-package com.cmss.test.mvc.mapper;
+package com.dytt.test.mvc.mapper;
 
 import com.dytt.common.model.mvc.BaseMapper;
-import com.cmss.test.mvc.Demo;
+import com.dytt.test.mvc.Demo;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

@@ -1,10 +1,10 @@
 /* created by chenshi at 2019-02-02 */
-package com.cmss.test.mvc;
+package com.dytt.test.mvc;
 
 import com.dytt.common.model.exception.ServiceException;
 import com.dytt.common.model.mvc.BaseMapper;
 import com.dytt.common.model.mvc.BaseServiceImpl;
-import com.cmss.test.mvc.mapper.DemoMapper;
+import com.dytt.test.mvc.mapper.DemoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

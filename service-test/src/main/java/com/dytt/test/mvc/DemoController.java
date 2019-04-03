@@ -1,5 +1,5 @@
 /* created by chenshi at 2019-02-02 */
-package com.cmss.test.mvc;
+package com.dytt.test.mvc;
 
 import com.dytt.common.model.mvc.BaseController;
 import com.dytt.common.model.mvc.BaseService;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 @RestController
 public class DemoController extends BaseController<Demo> {
 
-//    private final static Logger logger = LoggerFactory.getLogger(LogUtil.class);
+    //    private final static Logger logger = LoggerFactory.getLogger(LogUtil.class);
     @Autowired
     DemoService demoService;
 
@@ -37,7 +37,7 @@ public class DemoController extends BaseController<Demo> {
     }
 
     @GetMapping(value = {"/detail2/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
-    public Demo detail2(@PathVariable Long id, HttpServletRequest request) {
+    public Demo detail2(@PathVariable Long id, @RequestParam String name, @RequestParam String home, HttpServletRequest request) {
         String accept = request.getHeader("Accept");
         Demo demo = demoService.selectByPrimaryKey2(id);
         return demo;
@@ -47,8 +47,8 @@ public class DemoController extends BaseController<Demo> {
     public ResponseResult exceptionTest() {
 //        logger.info("--------------------------2222222222-----------------");
 //        LogUtil
-        HashMap[] map=new HashMap[5];
-        map[5].put("1","2");
+        HashMap[] map = new HashMap[5];
+        map[5].put("1", "2");
 
         return new ResponseResult("cdhhgh");
     }

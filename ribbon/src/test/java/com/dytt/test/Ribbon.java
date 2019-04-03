@@ -1,5 +1,5 @@
 /* created by chenshi at 2019-02-12 */
-package com.cmss.test;
+package com.dytt.test;
 
 import com.dytt.common.model.test.BaseTest;
 import org.junit.Test;

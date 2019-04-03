@@ -5,10 +5,10 @@ import com.dytt.common.model.mvc.ResponseResult;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MovieServiceHystric implements MovieService{
+public class MovieServiceHystric implements MovieService {
 
     private ResponseResult getFailResult() {
-        return new ResponseResult("94512","lianjieshibai");
+        return new ResponseResult("94512", "lianjieshibai");
     }
 
 

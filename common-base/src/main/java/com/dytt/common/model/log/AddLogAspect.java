@@ -1,10 +1,13 @@
 /* created by chenshi at 2019-02-02 */
 package com.dytt.common.model.log;
 
+import com.dytt.common.model.utils.LogUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
 
 import java.lang.reflect.Method;
@@ -14,23 +17,27 @@ import java.util.Date;
 public class AddLogAspect implements Ordered {
     private final int order;
 
-//    protected Logger logger;
+    protected Logger logger = LoggerFactory.getLogger(AddLogAspect.class);
 
-    @Around(value = "@annotation(com.dytt.common.model.log.AddLog)")
+    @Around(value = "@annotation(com.dytt.common.model.log.AddLog)||@annotation(org.springframework.web.bind.annotation.GetMapping)@annotation(org.springframework.web.bind.annotation.PostMapping)")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
         /**1,获取目标对象,方法*/
         Object target = pjp.getTarget();
         MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
         Method method = methodSignature.getMethod();
-//        logger.info("--------service----start:" + target.getClass() + "." + method.getName());
+
+        RequestLog requestLog = new RequestLog();
+        LogUtil.info("---requestLog--start:{}", requestLog);
         Date startDate = new Date();
         Object proceed = null;
         try {
             proceed = pjp.proceed();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
+            LogUtil.info("--------request----end--error:{},耗时毫秒数:{}毫秒", throwable, (new Date().getTime() - startDate.getTime()));
+            throw throwable;
         }
-//        logger.info("--------service----end:" + target.getClass() + "." + method.getName() + ",耗时毫秒数:" + (new Date().getTime() - startDate.getTime()) + "毫秒");
+        LogUtil.info("--------requestLog----end--ok  result:{},耗时毫秒数:{}毫秒", proceed, (new Date().getTime() - startDate.getTime()));
         return proceed;
     }
 

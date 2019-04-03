@@ -38,9 +38,9 @@ public class ExceptionResolver {
             //service层出现异常
             errorResult.put("code", "947003");
             errorResult.put("msg", "controller出现异常");
-        }else if (exception instanceof MailException){
+        } else if (exception instanceof MailException) {
             errorResult.put("code", "947004");
-            errorResult.put("msg", "发送邮件出现异常:{}"+exception);
+            errorResult.put("msg", "发送邮件出现异常:{}" + exception);
         }
 
         //发邮件

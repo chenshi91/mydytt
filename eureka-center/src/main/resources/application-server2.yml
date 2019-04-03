@@ -1,5 +1,5 @@
 server:
-  port: 2001
+  port: 2002
 
 eureka:
   instance:
@@ -10,9 +10,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-       defaultZone: http://localhost:2001/eureka/
-  server:
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 3000
-
-
+       defaultZone: http://localhost:2002/eureka/,http://localhost:2001/eureka/,http://localhost:2003/eureka/

@@ -25,6 +25,7 @@ public class RestRequestFilter extends OncePerRequestFilter {
 
         if (requestBody != null) {
             httpServletRequest.setAttribute(WebConstance.REQUEST_BODY, requestBody);
+            httpServletRequest.setAttribute(WebConstance.REQUEST_ID, System.currentTimeMillis());
         }
         filterChain.doFilter(request, httpServletResponse);
     }

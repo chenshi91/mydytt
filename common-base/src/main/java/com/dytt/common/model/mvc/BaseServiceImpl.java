@@ -20,7 +20,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
             getMapper().deleteByPrimaryKey(id);
         } catch (RuntimeException e) {
             e.printStackTrace();
-            throw new ServiceException("-----deleteByPrimaryKey()-----sql执行出现异常:"+e.getMessage());
+            throw new ServiceException("-----deleteByPrimaryKey()-----sql执行出现异常:" + e.getMessage());
         }
     }
 
@@ -31,7 +31,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
             getMapper().insert(record);
         } catch (RuntimeException e) {
             e.printStackTrace();
-            throw new ServiceException("-----insert()-----sql执行出现异常:"+e.getMessage());
+            throw new ServiceException("-----insert()-----sql执行出现异常:" + e.getMessage());
         }
     }
 
@@ -56,7 +56,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
     @AddLog
     @Override
     public PageInfo<T> selectByConditionWithPage(int pageNo, int pageSize, T t) throws ServiceException {
-        PageHelper.startPage(pageNo,pageSize);
+        PageHelper.startPage(pageNo, pageSize);
         List<T> list = getMapper().selectByCondition(t);
         return new PageInfo<T>(list);
     }

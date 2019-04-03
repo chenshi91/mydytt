@@ -1,5 +1,5 @@
 /* created by chenshi at 2019-02-03 */
-package com.cmss.test.demo;
+package com.dytt.test.demo;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -100,6 +100,6 @@ public class Demo extends BaseTest {
 
     @Override
     protected String getIpHost() {
-        return "http://localhost:3000";
+        return "http://localhost:8087";
     }
 }

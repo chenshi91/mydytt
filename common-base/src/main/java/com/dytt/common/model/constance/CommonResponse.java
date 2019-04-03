@@ -3,6 +3,6 @@ package com.dytt.common.model.constance;
 
 public class CommonResponse {
 
-    public static final String SUCCESS_CODE="000000";
-    public static final String SUCCESS_MSG="success";
+    public static final String SUCCESS_CODE = "000000";
+    public static final String SUCCESS_MSG = "success";
 }

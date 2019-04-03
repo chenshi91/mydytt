@@ -1,5 +1,6 @@
 /* created by chenshi at 2018-11-10 */
 package com.dytt.movie.service;
+
 ;
 import com.dytt.movie.entity.Movie;
 import com.dytt.common.model.mvc.BaseService;

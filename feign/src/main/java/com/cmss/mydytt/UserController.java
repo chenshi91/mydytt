@@ -16,7 +16,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping(value = {"/selectById/{id}"})
-    public JSONObject hi(@PathVariable(value = "id") Long   id) {
+    public JSONObject hi(@PathVariable(value = "id") Long id) {
         return userService.hi(id);
     }
 }

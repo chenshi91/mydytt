@@ -30,8 +30,6 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
     MovieMapper movieMapper;
 
 
-
-
     @Async(value = "movieThreadPool")
     @Override
     public void async() {
@@ -46,7 +44,7 @@ public class MovieServiceImpl extends BaseServiceImpl<Movie> implements MovieSer
 
     @Override
     public ResponseResult listByPage(int pageNo, int pageSize, Movie movie) {
-        PageHelper.startPage(pageNo,pageSize);
+        PageHelper.startPage(pageNo, pageSize);
         List<Movie> list = movieMapper.selectByCondition(movie);
         return new ResponseResult(new PageInfo<Movie>(list));
     }

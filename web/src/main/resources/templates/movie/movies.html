@@ -1,5 +1,5 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>电影天堂</title>
@@ -11,15 +11,15 @@
     <!--<span th:text="${result.msg}"></span><br>-->
     <!--<span th:text="${result.code}"></span><br>sgdhgsjhdgfgsdf-->
     <!--<span th:text="${result.port}"></span><br>-->
-    {{  result.msg   }}${chen} {{chen}}[[${chen}]]
+    {{ result.msg }}${chen} {{chen}}[[${chen}]]
     <!--<span th:text="${result.data.total}"></span>-->
     <div style="height: auto">
         <ul>
-            <li  th:each="entity:${result.data.list}">
+            <li th:each="entity:${result.data.list}">
                 <span th:text="${entity.id}"></span>&nbsp;
                 [[${entity.name}]]
                 <!--<span th:text="${entity.name}"></span>- -->
-                <a href="movie.html" th:href="@{/movie/[[${entity.name}]]}">[[${entity.name}]]</a>
+                <a href="movie.html" th:href="@{/movie/${entity.id}}">[[${entity.name}]]</a>
                 <!--<span th:text="${entity.downloadLink}"></span>span-->
                 <!--<span th:text='${entity.imgUrl}'></span>-->
                 <!--<img src="${entity.imgUrl}>">-->
