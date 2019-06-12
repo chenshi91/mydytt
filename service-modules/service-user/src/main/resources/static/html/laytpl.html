@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layer弹窗</title>
+    <script src="/layui/layui.js"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div    class="layui-fluid">
+    <div    class="layui-row layui-col-space10">
+        <div    class="layui-col-md5 layui-bg-green">
+            <div class="layui-row">
+                <div class="layui-col-md3 layui-bg-black">black</div>
+                <div class="layui-col-md5 blue">blue</div>
+                <div class="layui-col-md4 layui-bg-red">red</div>
+                <div class="layui-col-md6 layui-bg-black">black</div>
+                <div class="layui-col-md6 layui-bg-green">green</div>
+            </div>
+        </div>
+
+        <div    class="layui-col-md7  layui-bg-orange">
+            <!--//第二步：建立视图。用于呈现渲染结果。-->
+            <div id="view"></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--//第一步：编写模版。你可以使用一个script标签存放模板，如：-->
+<script id="demo" type="text/html">
+    <h3>{{ d.title }}</h3>
+    <ul>
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li>
+            <span>{{ item.modname }}</span>
+            <span>{{ item.alias }}：</span>
+            <span>{{ item.site || '' }}</span>
+        </li>
+        {{#  }); }}
+        {{#  if(d.list.length === 0){ }}
+        无数据
+        {{#  } }}
+    </ul>
+</script>
+<script>
+    layui.use(['laytpl','layer'],function () {
+        var laytpl = layui.laytpl;
+        var layer = layui.layer;
+
+        laytpl('{{d.name}}是个帅哥~').render({
+            name:"chenshi"
+        },function (str) {
+            console.info(str);
+            layer.msg(str)
+        });
+
+
+
+
+//第三步：渲染模版
+var data = { //数据
+    "title":"Layui常用模块",
+    "list":[
+         {"modname":"弹层","alias":"layer","site":"layer.layui.com"}
+        ,{"modname":"表单","alias":"form","site":"layform.layui.com"}
+        ,{"modname":"时间插件","alias":"form","site":"laydate.layui.com"}
+    ],
+}
+
+var getTpl = demo.innerHTML
+,view = document.getElementById('view');
+
+laytpl(getTpl).render(data, function(html){
+    view.innerHTML = html;
+});
+
+
+    })
+</script>
+</body>
+</html>
+
+

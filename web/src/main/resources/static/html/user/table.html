@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>用户table</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div    class="layui-fluid">
+    <div    class="layui-row layui-bg-gray">
+        <div    class="layui-col-md12">
+            <ul class="layui-nav">
+                <li class="layui-nav-item"><a>最新用户</a> </li>
+                <li class="layui-nav-item"><a>海外用户</a> </li>
+                <li class="layui-nav-item"><a>国内用户</a> </li>
+                <li class="layui-nav-item"><a>我</a>
+                    <dl class="layui-nav-child">
+                        <dd ><a>退出</a></dd>
+                        <dd ><a>我的资料</a></dd>
+                        <dd ><a>设置</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
+        <div    class="layui-col-md12  " align="center">
+
+            <div    class="layui-row">
+                <div    class="layui-col-md8 layui-bg-gray" >
+                    <div class="layui-form tool-bar">
+                        <form class="layui-form" lay-filter="formFilter" id="reqForm">
+                            <input  type="text" class="layui-input-inline layui-icon-search" id="nickName" name="nickName" style="width: 120px;height: 20px"/>
+                            <i class="layui-icon layui-icon-search"></i>
+                            <i class="layui-icon layui-icon-face-smile-fine"></i>
+                            <button class="layui-btn " lay-submit   id="submit">搜索</button>
+                        </form >
+                    </div>
+                    <table class="layui-layer-tabli" lay-skin="nob" id="data-table" lay-filter="tableFilter">
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script type="text/html" id="barDemo" lay-filter="updateFilter">
+    <a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+
+    <!-- 这里同样支持 laytpl 语法，如： -->
+    {{#  if(d.auth > 2){ }}
+    <a class="layui-btn layui-btn-xs" lay-event="check">审核</a>
+    {{#  } }}
+</script>
+<script type="text/html" id="sexTpl">
+    {{#  if(d.sex == 1){ }}
+    男
+    <!--<input type="radio" name="sex" value="1" title="男" checked>-->
+    {{#  } else { }}
+    女
+    <!--<input type="radio" name="sex" value="2" title="女" checked>-->
+    {{#  } }}
+</script>
+<script src="/layui/layui.js"></script>
+<!-- 你的HTML代码 -->
+<script>
+    layui.config({
+        base:"../global/"
+    });
+    layui.use(['layer', 'form','table','element','global'],function () {
+        var layer = layui.layer,
+            table=layui.table,
+            form = layui.form,
+            global=layui.global,
+            $=layui.$,
+            element=layui.element;
+        // var nickName=$("#nickName").val();
+        debugger;
+        console.info(global.serverURL);
+        // form.val("formFilter",{
+        //     "nickName":""
+        // });
+        table.render({
+            elem:'#data-table',
+            url:global.ip_host+"/page",
+            request:global.request,
+            response:global.response,
+            height:400,
+            width:600,
+            size:"lg",
+            page:true,
+            cols:[[
+                {type:"checkbox"},
+                {field:'id',width:120,sort:true,title:'ID'},
+                {field:'nickName',width:120,title:'昵称',type:'normal',edit:'text'},
+                {field:'phone',width:120,title:'phone',event:'go'},
+                {field:'sex',width:80,title:'性别',templet:"#sexTpl"},
+                {fixed: 'right', width:180, align:'center',title:'操作', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+
+            ]],
+
+        });
+        var checkStatus = table.checkStatus("data-table");
+        console.log(checkStatus.data) //获取选中行的数据
+        console.log(checkStatus.data.length) //获取选中行数量，可作为是否有选中行的条件
+        console.log(checkStatus.isAll ) //表格是否全选
+
+        table.on('tool(tableFilter)',function (obj) {
+            debugger;
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的DOM对象
+            if(layEvent === 'detail'){ //查看
+                //do somehing
+                layer.msg("查看详情!")
+                layer.prompt({
+                    formType: 2,
+                    value: "<form class='layui-form'>昵称:<input name='nickName' value=''/> </form>",
+                    title: '用户详情',
+                    area: ['800px', '350px'] //自定义文本域宽高
+                }, function(value, index, elem){
+                    alert(value); //得到value
+                    layer.close(index);
+                });
+            } else if(layEvent === 'del'){ //删除
+                layer.confirm('真的删除行么', function(index){
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.close(index);
+                    //向服务端发送删除指令
+                    layer.msg("删除数据情!")
+                });
+            } else if(layEvent === 'edit') { //编辑
+                //do something
+                layer.msg("编辑数据!")
+            }else if (layEvent == 'go') {
+                layer.msg("跳转详情页面");
+                location.href="form.html";
+            }
+        });
+
+        form.on('submit(formFilter)',function (obj) {
+             debugger;
+             var nickName = obj.field.nickName;
+             var nickName2 = $("#reqForm [name=nickName]").val();
+             var params = obj.field;
+            var render = table.render({
+                elem:'#data-table',
+                url:'http://localhost:8010/page',
+                where:{
+                    "nickName":nickName,
+                    "pageNo":2,
+                    "pageSize":5
+                },
+                request:{
+                    pageName:"pageNo",
+                    limitName:"pageSize"
+                },
+                response:{
+                    dataName:"records"
+
+                },
+                height:600,
+                width:650,
+                size:"lg",
+                page:true,
+                cols:[[
+                    {type:"checkbox"},
+                    {field:'id',width:120,sort:true,title:'ID'},
+                    {field:'nickName',width:120,title:'昵称'},
+                    {field:'phone',width:120,title:'phone'},
+                    {field:'sex',width:80,title:'性别',templet:function (entity) {
+                            return entity.sex == 1 ? "男" : "女";
+                        }},
+                    {fixed: 'right', width:150, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+
+                ]]
+            });
+        });
+    });
+</script>
+</body>
+</html>
+
+

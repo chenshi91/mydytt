@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>laydate</title>
+    <script src="/layui/layui.js"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div    class="layui-fluid">
+    <div    class="layui-row layui-col-space10">
+        <div    class="layui-col-md5 layui-bg-green">
+           <div class="layui-row">
+               <div class="layui-col-md3 layui-bg-black">black</div>
+               <div class="layui-col-md5 blue">blue</div>
+               <div class="layui-col-md4 layui-bg-red">red</div>
+               <div class="layui-col-md6 layui-bg-black">black</div>
+               <div class="layui-col-md6 layui-bg-green">green</div>
+           </div>
+        </div>
+
+        <div    class="layui-col-md7  layui-bg-orange">
+            <form class="layui-form" >
+               日期:<input class="layui-input" id="dateId"/>
+                <button class="layui-btn" lay-submit lay-filter="submitFiler" >layerButton</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    layui.use(['laydate'],function () {
+        var laydate = layui.laydate;
+        var date1 = laydate.render({
+           elem:"#dateId",
+           type:"datetime",
+           mark:{
+               "0-5-23":"植树节,记得种树啊!",
+               "0-4-23":"劳动节,记得种树啊!"
+           },
+           done:function (value, date) {
+               if (date.year == 2019 && date.month == 4 && date.date==10) {
+                   date1.hint('中国人民抗日战争胜利72周年');
+               }
+           }
+        });
+
+    })
+</script>
+</body>
+</html>
+
+

@@ -12,12 +12,12 @@ spring:
 zuul:
   routes:
     api-demo:
-      path: /api-demo/**
-      serviceId: service-demo
+      path: /api-stream/**
+      serviceId: service-stream
     api-movie:
       path: /api-movie/**
       serviceId: service-movie
-  retryable: true
+  retryable: true #开启重试
 
 ribbon:
   MaxAutoRetries: 0
@@ -34,7 +34,11 @@ hystrix:
               isolation:
                     thread:
                         timeoutInMilliseconds: 3500
-
+    threadpool:
+      default:
+        coreSize: 200 #并发执行的最大线程数，默认10
+              maxQueueSize: 1000 #BlockingQueue的最大队列数，默认值-1
+              queueSizeRejectionThreshold: 800 #即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝，默认值5
 
 
 ##是否开启重试功能

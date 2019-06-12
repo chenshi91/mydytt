@@ -22,4 +22,11 @@ public class FileUtils {
 
         }
     }
+
+    @Test
+    public void aaa(){
+        Integer integer1 = new Integer(1280);
+        Integer integer2 = integer1;
+        System.out.println(integer1 ==integer2 );
+    }
 }

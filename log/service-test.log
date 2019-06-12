@@ -1,278 +1,312 @@
-2019-04-03 14:43:52.190  INFO 22220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-04-03 14:43:53.205  INFO 22220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70f076d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-03 14:43:56.230  INFO 22220 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2019-04-03 14:43:56.291  INFO 22220 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-04-03 14:43:56.425  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-04-03 14:43:57.544  INFO 10220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-04-03 14:43:58.436  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-04-03 14:43:58.437  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-04-03 14:43:58.454  INFO 10220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$458d104] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-03 14:43:58.788  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-04-03 14:43:58.789  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-04-03 14:43:59.400  INFO 22220 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:44:00.567  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-04-03 14:44:00.569  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-04-03 14:44:00.569  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-04-03 14:44:00.571  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-04-03 14:44:00.571  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-04-03 14:44:00.571  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-04-03 14:44:00.571  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-04-03 14:44:01.021  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-04-03 14:44:01.027  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
-2019-04-03 14:44:01.037  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1554273841035 with initial instances count: 7
-2019-04-03 14:44:01.629  INFO 10220 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2019-04-03 14:44:01.698  INFO 10220 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-04-03 14:44:01.863  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-04-03 14:44:03.309  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-04-03 14:44:03.310  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-04-03 14:44:03.569  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-04-03 14:44:03.571  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-04-03 14:44:04.058  INFO 10220 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:44:04.120  INFO 22220 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Multiple Config Server Urls found listed.
-2019-04-03 14:44:04.121  INFO 22220 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888/
-2019-04-03 14:44:05.244  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-04-03 14:44:05.245  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-04-03 14:44:05.247  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-04-03 14:44:05.247  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-04-03 14:44:05.248  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-04-03 14:44:05.248  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-04-03 14:44:05.249  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-04-03 14:44:05.781  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-04-03 14:44:05.785  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
-2019-04-03 14:44:05.796  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1554273845793 with initial instances count: 7
-2019-04-03 14:44:08.168  INFO 10220 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Multiple Config Server Urls found listed.
-2019-04-03 14:44:08.169  INFO 10220 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888/
-2019-04-03 14:44:10.713  INFO 22220 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
-2019-04-03 14:44:10.715  INFO 22220 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/chenshi91/mydytt-config.git/dytt/mysql-pro.properties'}]}
-2019-04-03 14:44:10.773  INFO 22220 --- [restartedMain] com.dytt.test.TestApplication            : The following profiles are active: test1
-2019-04-03 14:44:13.054  INFO 22220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-04-03 14:44:13.058  INFO 22220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-04-03 14:44:13.109  INFO 22220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
-2019-04-03 14:44:13.274  WARN 22220 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-04-03 14:44:13.636  INFO 22220 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1bf8e99e-fa18-3967-a1f0-7435a7393ce5
-2019-04-03 14:44:13.849  INFO 22220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54d673dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-03 14:44:14.025  INFO 22220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70f076d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-03 14:44:14.210  INFO 10220 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
-2019-04-03 14:44:14.211  INFO 10220 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/chenshi91/mydytt-config.git/dytt/mysql-pro.properties'}]}
-2019-04-03 14:44:14.265  INFO 10220 --- [restartedMain] com.dytt.test.TestApplication            : The following profiles are active: test2
-2019-04-03 14:44:14.808  INFO 22220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
-2019-04-03 14:44:14.851  INFO 22220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-03 14:44:14.852  INFO 22220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
-2019-04-03 14:44:14.862  INFO 22220 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\Program Files\Git\cmd;C:\Users\39248\AppData\Local\Microsoft\WindowsApps;;.]
-2019-04-03 14:44:15.311  INFO 22220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-03 14:44:15.311  INFO 22220 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4508 ms
-2019-04-03 14:44:15.536  WARN 22220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-04-03 14:44:15.536  INFO 22220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-04-03 14:44:15.550  INFO 22220 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1c866afa
-2019-04-03 14:44:16.833  INFO 10220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-04-03 14:44:16.838  INFO 10220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-04-03 14:44:16.909  INFO 10220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
-2019-04-03 14:44:17.142  WARN 10220 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2019-04-03 14:44:17.475  INFO 10220 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1bf8e99e-fa18-3967-a1f0-7435a7393ce5
-2019-04-03 14:44:17.686  INFO 10220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e83ece07] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-03 14:44:17.847  INFO 10220 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$458d104] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-04-03 14:44:18.302  INFO 22220 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2019-04-03 14:44:18.642  INFO 10220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2019-04-03 14:44:18.679  INFO 10220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-04-03 14:44:18.681  INFO 10220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
-2019-04-03 14:44:18.693  INFO 10220 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\Program Files\Git\cmd;C:\Users\39248\AppData\Local\Microsoft\WindowsApps;;.]
-2019-04-03 14:44:19.155  INFO 10220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-04-03 14:44:19.156  INFO 10220 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4860 ms
-2019-04-03 14:44:19.364  WARN 10220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-04-03 14:44:19.364  INFO 10220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-04-03 14:44:19.378  INFO 10220 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4bad1d3c
-2019-04-03 14:44:20.595  INFO 22220 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2019-04-03 14:44:21.706  INFO 22220 --- [restartedMain] c.d.c.m.t.MyThreadPoolTaskExecutor       : Initializing ExecutorService
-2019-04-03 14:44:21.709  INFO 22220 --- [restartedMain] c.d.c.m.t.MyThreadPoolTaskExecutor       : Initializing ExecutorService 'asyncThreadPool'
-2019-04-03 14:44:21.733  WARN 22220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-04-03 14:44:21.734  INFO 22220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-04-03 14:44:21.820  INFO 10220 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2019-04-03 14:44:22.200  INFO 22220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-04-03 14:44:23.125  INFO 22220 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2019-04-03 14:44:23.836  WARN 22220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2019-04-03 14:44:23.957  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-04-03 14:44:23.967  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-04-03 14:44:23.979  INFO 22220 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-04-03 14:44:24.017  INFO 10220 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2019-04-03 14:44:24.151  INFO 22220 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-04-03 14:44:24.156  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-04-03 14:44:24.160  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-04-03 14:44:24.162  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-04-03 14:44:24.162  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-04-03 14:44:24.162  INFO 22220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-04-03 14:44:24.288  INFO 22220 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:44:24.290  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-04-03 14:44:24.290  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-04-03 14:44:24.290  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-04-03 14:44:24.290  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-04-03 14:44:24.291  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-04-03 14:44:24.291  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-04-03 14:44:24.291  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-04-03 14:44:24.300  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-04-03 14:44:24.302  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-04-03 14:44:24.305  INFO 22220 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-04-03 14:44:24.308  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1554273864308 with initial instances count: 7
-2019-04-03 14:44:24.315  INFO 22220 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-demo with eureka with status UP
-2019-04-03 14:44:24.317  INFO 22220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1554273864316, current=UP, previous=STARTING]
-2019-04-03 14:44:24.319  INFO 22220 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087: registering service...
-2019-04-03 14:44:24.384  INFO 22220 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087 - registration status: 204
-2019-04-03 14:44:24.395  INFO 22220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
-2019-04-03 14:44:24.399  INFO 22220 --- [restartedMain] com.dytt.test.TestApplication            : Started TestApplication in 38.331 seconds (JVM running for 45.305)
-2019-04-03 14:44:25.204  INFO 10220 --- [restartedMain] c.d.c.m.t.MyThreadPoolTaskExecutor       : Initializing ExecutorService
-2019-04-03 14:44:25.208  INFO 10220 --- [restartedMain] c.d.c.m.t.MyThreadPoolTaskExecutor       : Initializing ExecutorService 'asyncThreadPool'
-2019-04-03 14:44:25.261  WARN 10220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-04-03 14:44:25.263  INFO 10220 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-04-03 14:44:25.296  INFO 22220 --- [RMI TCP Connection(11)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-04-03 14:44:25.297  INFO 22220 --- [RMI TCP Connection(11)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-04-03 14:44:25.298  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-04-03 14:44:25.303  WARN 22220 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-04-03 14:44:25.321  INFO 22220 --- [RMI TCP Connection(11)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
-2019-04-03 14:44:25.637  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-04-03 14:44:25.977  INFO 10220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-04-03 14:44:26.802  INFO 10220 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2019-04-03 14:44:27.499  WARN 10220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2019-04-03 14:44:27.618  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-04-03 14:44:27.626  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-04-03 14:44:27.638  INFO 10220 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-04-03 14:44:27.813  INFO 10220 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-04-03 14:44:27.817  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-04-03 14:44:27.822  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-04-03 14:44:27.824  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-04-03 14:44:27.824  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-04-03 14:44:27.824  INFO 10220 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-04-03 14:44:27.958  INFO 10220 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:44:27.960  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-04-03 14:44:27.960  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-04-03 14:44:27.960  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-04-03 14:44:27.960  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-04-03 14:44:27.961  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-04-03 14:44:27.961  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-04-03 14:44:27.962  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-04-03 14:44:27.970  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-04-03 14:44:27.971  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-04-03 14:44:27.974  INFO 10220 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-04-03 14:44:27.975  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1554273867975 with initial instances count: 7
-2019-04-03 14:44:27.981  INFO 10220 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-demo with eureka with status UP
-2019-04-03 14:44:27.982  INFO 10220 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1554273867982, current=UP, previous=STARTING]
-2019-04-03 14:44:27.985  INFO 10220 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8088: registering service...
-2019-04-03 14:44:28.061  INFO 10220 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8088 - registration status: 204
-2019-04-03 14:44:28.070  INFO 10220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
-2019-04-03 14:44:28.075  INFO 10220 --- [restartedMain] com.dytt.test.TestApplication            : Started TestApplication in 34.975 seconds (JVM running for 42.809)
-2019-04-03 14:44:28.927  INFO 10220 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-04-03 14:44:28.929  INFO 10220 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-04-03 14:44:28.936  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-04-03 14:44:28.940  WARN 10220 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-04-03 14:44:28.956  INFO 10220 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
-2019-04-03 14:44:29.229  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-04-03 14:44:29.967  WARN 22220 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=service-demo, managementUrl=http://DESKTOP-LKEEB7S:8087/actuator, healthUrl=http://DESKTOP-LKEEB7S:8087/actuator/health, serviceUrl=http://DESKTOP-LKEEB7S:8087/) at spring-boot-admin ([http://localhost:8000/instances]): I/O error on POST request for "http://localhost:8000/instances": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect. Further attempts are logged on DEBUG level
-2019-04-03 14:44:30.655  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Multiple Config Server Urls found listed.
-2019-04-03 14:44:30.655  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888/
-2019-04-03 14:44:33.973  WARN 10220 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=service-demo, managementUrl=http://DESKTOP-LKEEB7S:8088/actuator, healthUrl=http://DESKTOP-LKEEB7S:8088/actuator/health, serviceUrl=http://DESKTOP-LKEEB7S:8088/) at spring-boot-admin ([http://localhost:8000/instances]): I/O error on POST request for "http://localhost:8000/instances": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect. Further attempts are logged on DEBUG level
-2019-04-03 14:44:33.981  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
-2019-04-03 14:44:34.115  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-04-03 14:44:34.118  INFO 22220 --- [RMI TCP Connection(9)-127.0.0.1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-04-03 14:44:34.216  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Multiple Config Server Urls found listed.
-2019-04-03 14:44:34.216  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888/
-2019-04-03 14:44:37.295  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
-2019-04-03 14:44:37.455  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2019-04-03 14:44:37.459  INFO 10220 --- [RMI TCP Connection(11)-127.0.0.1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2019-04-03 14:47:43.952  INFO 22220 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2019-06-03 16:07:28.702  INFO 56668 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-03 16:07:30.176  INFO 56668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$16386e2d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:07:30.219  INFO 56668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3c8ed905] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:07:31.287  INFO 56668 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-03 16:07:31.467  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-03 16:07:31.743  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-03 16:07:31.744  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-03 16:07:32.122  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-03 16:07:32.123  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-03 16:07:32.679  INFO 56668 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:07:33.120  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-03 16:07:33.121  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-03 16:07:33.122  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-03 16:07:33.123  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-03 16:07:33.123  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-03 16:07:33.123  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-03 16:07:33.123  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-03 16:07:33.968  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-03 16:07:33.975  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-06-03 16:07:33.987  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1559549253984 with initial instances count: 4
+2019-06-03 16:07:35.220  INFO 56668 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://DESKTOP-LKEEB7S:8888/
+2019-06-03 16:07:37.545  INFO 56668 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
+2019-06-03 16:07:37.547  INFO 56668 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/chenshi91/mydytt-config.git/dytt/mysql-pro.properties'}]}
+2019-06-03 16:07:37.619  INFO 56668 --- [main] com.dytt.module.test.TestApplication     : The following profiles are active: eureka,mail,redis,kafka,hystrix,test1
+2019-06-03 16:07:39.441  WARN 56668 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.dytt.test.mvc.dao]' package. Please check your configuration.
+2019-06-03 16:07:40.633  INFO 56668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-03 16:07:40.649  INFO 56668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-03 16:07:40.776  INFO 56668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59ms. Found 0 repository interfaces.
+2019-06-03 16:07:41.326  WARN 56668 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-06-03 16:07:42.936  INFO 56668 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=767556b9-5c1c-3707-b34f-b2bf3214af0c
+2019-06-03 16:07:43.295  INFO 56668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$f426e78b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:07:43.672  INFO 56668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2074d608] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:07:44.058  INFO 56668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3c8ed905] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:07:48.308  INFO 56668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2019-06-03 16:07:48.633  INFO 56668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-03 16:07:48.634  INFO 56668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-06-03 16:07:48.775  INFO 56668 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\39248\AppData\Local\Microsoft\WindowsApps;C:\Users\39248\AppData\Roaming\npm;.]
+2019-06-03 16:07:50.344  INFO 56668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-03 16:07:50.345  INFO 56668 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12623 ms
+2019-06-03 16:07:51.327  WARN 56668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-03 16:07:51.328  INFO 56668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-03 16:07:51.606  INFO 56668 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5d343261
+2019-06-03 16:08:06.956  WARN 56668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-03 16:08:06.957  INFO 56668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-03 16:08:11.336  INFO 56668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-03 16:08:17.329  INFO 56668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-03 16:08:17.339  WARN 56668 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-06-03 16:08:23.522  INFO 56668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-03 16:08:32.203  INFO 56668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2019-06-03 16:08:47.381  WARN 56668 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-03 16:08:51.709  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-03 16:08:51.989  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-03 16:08:53.968  INFO 56668 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-06-03 16:09:04.030  INFO 56668 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-03 16:09:04.035  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-03 16:09:04.205  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-03 16:09:04.205  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-03 16:09:04.207  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-03 16:09:04.207  INFO 56668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-03 16:09:05.368  INFO 56668 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:09:05.372  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-03 16:09:05.373  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-03 16:09:05.373  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-03 16:09:05.374  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-03 16:09:05.374  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-03 16:09:05.374  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-03 16:09:05.374  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-03 16:09:05.385  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-03 16:09:05.507  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-03 16:09:05.545  INFO 56668 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-03 16:09:05.549  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1559549345548 with initial instances count: 4
+2019-06-03 16:09:05.696  INFO 56668 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-demo with eureka with status UP
+2019-06-03 16:09:05.700  INFO 56668 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1559549345700, current=UP, previous=STARTING]
+2019-06-03 16:09:05.706  INFO 56668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087: registering service...
+2019-06-03 16:09:10.563  INFO 56668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2019-06-03 16:09:10.566  INFO 56668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087 - registration status: 204
+2019-06-03 16:09:10.914  INFO 56668 --- [main] com.dytt.module.test.TestApplication     : Started TestApplication in 105.798 seconds (JVM running for 121.631)
+2019-06-03 16:09:21.072  WARN 56668 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=service-demo, managementUrl=http://DESKTOP-LKEEB7S:8087/actuator, healthUrl=http://DESKTOP-LKEEB7S:8087/actuator/health, serviceUrl=http://DESKTOP-LKEEB7S:8087/) at spring-boot-admin ([http://localhost:8000/instances]): I/O error on POST request for "http://localhost:8000/instances": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect. Further attempts are logged on DEBUG level
+2019-06-03 16:10:11.107  INFO 56668 --- [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-03 16:10:11.107  INFO 56668 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-03 16:10:16.394 ERROR 56668 --- [Catalina-utility-1] o.a.coyote.http11.Http11NioProtocol      : Error processing async timeouts
 
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_131]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_131]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_131]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_131]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_131]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:648) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:583) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:500) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:462) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-common-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.31.Final.jar:4.1.31.Final]
+java.util.concurrent.ExecutionException: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122) [na:1.8.0_131]
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192) [na:1.8.0_131]
+	at org.apache.coyote.AbstractProtocol.startAsyncTimeout(AbstractProtocol.java:586) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol$1.run(AbstractProtocol.java:574) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_131]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [na:1.8.0_131]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_131]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.14.jar:9.0.14]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.concurrent.ConcurrentHashMap$KeySetView.iterator(ConcurrentHashMap.java:4578) ~[na:1.8.0_131]
+	at java.util.Collections$SetFromMap.iterator(Collections.java:5462) ~[na:1.8.0_131]
+	at org.apache.coyote.AbstractProtocol$2.run(AbstractProtocol.java:596) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	... 8 common frames omitted
 
-2019-04-03 14:47:43.952  INFO 10220 --- [lettuce-nioEventLoop-4-1] io.lettuce.core.protocol.CommandHandler  : null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_131]
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:1.8.0_131]
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[na:1.8.0_131]
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[na:1.8.0_131]
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[na:1.8.0_131]
-	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:648) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:583) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:500) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:462) [netty-transport-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-common-4.1.31.Final.jar:4.1.31.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.31.Final.jar:4.1.31.Final]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_131]
-
-2019-04-03 14:47:44.072  INFO 10220 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:6379
-2019-04-03 14:47:44.074  INFO 22220 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:6379
-2019-04-03 14:47:45.083  WARN 22220 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:47:45.087  WARN 10220 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:47:49.561  INFO 22220 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:47:49.561  INFO 10220 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:47:50.569  WARN 10220 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:47:50.570  WARN 22220 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:47:54.761  INFO 10220 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:47:54.761  INFO 22220 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:47:55.767  WARN 10220 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:47:55.768  WARN 22220 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:47:59.960  INFO 10220 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:47:59.962  INFO 22220 --- [lettuce-eventExecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:00.965  WARN 10220 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:00.967  WARN 22220 --- [lettuce-nioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:05.163  INFO 22220 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:05.163  INFO 10220 --- [lettuce-eventExecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:06.167  WARN 22220 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:06.169  WARN 10220 --- [lettuce-nioEventLoop-4-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:14.361  INFO 22220 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:14.463  INFO 10220 --- [lettuce-eventExecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:15.372  WARN 22220 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:15.473  WARN 10220 --- [lettuce-nioEventLoop-4-7] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:31.761  INFO 22220 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:31.860  INFO 10220 --- [lettuce-eventExecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:48:32.768  WARN 22220 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:48:32.865  WARN 10220 --- [lettuce-nioEventLoop-4-8] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:49:02.863  INFO 22220 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:49:02.960  INFO 10220 --- [lettuce-eventExecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:49:03.871  WARN 22220 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:49:03.966  WARN 10220 --- [lettuce-nioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:49:24.312  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:49:27.964  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:49:33.961  INFO 22220 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:49:34.061  INFO 10220 --- [lettuce-eventExecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:49:34.971  WARN 22220 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:49:35.067  WARN 10220 --- [lettuce-nioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:50:05.061  INFO 22220 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:50:05.161  INFO 10220 --- [lettuce-eventExecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:50:06.068  WARN 22220 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:50:06.166  WARN 10220 --- [lettuce-nioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
-2019-04-03 14:50:36.161  INFO 22220 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:50:36.165  INFO 22220 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to localhost:6379
-2019-04-03 14:50:36.261  INFO 10220 --- [lettuce-eventExecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost:6379
-2019-04-03 14:50:36.266  INFO 10220 --- [lettuce-nioEventLoop-4-4] i.l.core.protocol.ReconnectionHandler    : Reconnected to localhost:6379
-2019-04-03 14:54:24.315  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:54:27.967  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:59:24.320  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 14:59:27.969  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:04:24.322  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:04:27.972  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:09:24.326  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:09:27.976  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:14:24.328  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:14:27.978  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:19:24.330  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:19:27.979  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:24:24.332  INFO 22220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-04-03 15:24:27.982  INFO 10220 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:10:16.519  INFO 56668 --- [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5411 ms
+2019-06-03 16:11:05.947  INFO 67992 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-03 16:11:07.384  INFO 67992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$9938fcb6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:11:07.426  INFO 67992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$bf8f678e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:11:08.519  INFO 67992 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-03 16:11:08.670  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-03 16:11:08.959  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-03 16:11:08.961  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-03 16:11:09.318  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-03 16:11:09.319  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-03 16:11:09.820  INFO 67992 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:11:10.245  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-03 16:11:10.245  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-03 16:11:10.246  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-03 16:11:10.246  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-03 16:11:10.247  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-03 16:11:10.247  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-03 16:11:10.248  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-03 16:11:11.090  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-03 16:11:11.097  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-06-03 16:11:11.109  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1559549471107 with initial instances count: 5
+2019-06-03 16:11:12.284  INFO 67992 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://DESKTOP-LKEEB7S:8888/
+2019-06-03 16:11:14.627  INFO 67992 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
+2019-06-03 16:11:14.629  INFO 67992 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/chenshi91/mydytt-config.git/dytt/mysql-pro.properties'}]}
+2019-06-03 16:11:14.709  INFO 67992 --- [main] com.dytt.module.test.TestApplication     : The following profiles are active: eureka,mail,redis,kafka,hystrix,test1
+2019-06-03 16:11:16.360  WARN 67992 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.dytt.test.mvc.dao]' package. Please check your configuration.
+2019-06-03 16:11:17.986  INFO 67992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-03 16:11:17.995  INFO 67992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-03 16:11:18.150  INFO 67992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 0 repository interfaces.
+2019-06-03 16:11:18.658  WARN 67992 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-06-03 16:11:20.168  INFO 67992 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=767556b9-5c1c-3707-b34f-b2bf3214af0c
+2019-06-03 16:11:20.356  INFO 67992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$77277614] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:11:20.527  INFO 67992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a3756491] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:11:20.701  INFO 67992 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$bf8f678e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 16:11:21.923  INFO 67992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2019-06-03 16:11:22.041  INFO 67992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-03 16:11:22.043  INFO 67992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-06-03 16:11:22.071  INFO 67992 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\39248\AppData\Local\Microsoft\WindowsApps;C:\Users\39248\AppData\Roaming\npm;.]
+2019-06-03 16:11:22.474  INFO 67992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-03 16:11:22.474  INFO 67992 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7677 ms
+2019-06-03 16:11:22.790  WARN 67992 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-03 16:11:22.790  INFO 67992 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-03 16:11:22.809  INFO 67992 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4b047e94
+2019-06-03 16:11:26.485  WARN 67992 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-03 16:11:26.486  INFO 67992 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-03 16:11:27.100  INFO 67992 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-03 16:11:27.762  INFO 67992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-03 16:11:27.766  WARN 67992 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-06-03 16:11:28.223  INFO 67992 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-03 16:11:29.369  INFO 67992 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2019-06-03 16:11:30.573  WARN 67992 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-03 16:11:31.066  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-03 16:11:31.079  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-03 16:11:31.138  INFO 67992 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-06-03 16:11:31.410  INFO 67992 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-03 16:11:31.415  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-03 16:11:31.421  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-03 16:11:31.421  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-03 16:11:31.421  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-03 16:11:31.421  INFO 67992 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-03 16:11:31.555  INFO 67992 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:11:31.556  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-03 16:11:31.556  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-03 16:11:31.556  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-03 16:11:31.557  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-03 16:11:31.558  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-03 16:11:31.558  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-03 16:11:31.558  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-03 16:11:31.568  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-03 16:11:31.570  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-03 16:11:31.575  INFO 67992 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-03 16:11:31.578  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1559549491577 with initial instances count: 5
+2019-06-03 16:11:31.583  INFO 67992 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-demo with eureka with status UP
+2019-06-03 16:11:31.583  INFO 67992 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1559549491583, current=UP, previous=STARTING]
+2019-06-03 16:11:31.587  INFO 67992 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087: registering service...
+2019-06-03 16:11:31.722  INFO 67992 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087 - registration status: 204
+2019-06-03 16:11:31.729  INFO 67992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2019-06-03 16:11:31.735  INFO 67992 --- [main] com.dytt.module.test.TestApplication     : Started TestApplication in 29.42 seconds (JVM running for 48.741)
+2019-06-03 16:11:32.805  WARN 67992 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=service-demo, managementUrl=http://DESKTOP-LKEEB7S:8087/actuator, healthUrl=http://DESKTOP-LKEEB7S:8087/actuator/health, serviceUrl=http://DESKTOP-LKEEB7S:8087/) at spring-boot-admin ([http://localhost:8000/instances]): I/O error on POST request for "http://localhost:8000/instances": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect. Further attempts are logged on DEBUG level
+2019-06-03 16:11:32.816  INFO 67992 --- [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-03 16:11:32.817  INFO 67992 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-03 16:11:32.838  INFO 67992 --- [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2019-06-03 16:11:33.696  INFO 67992 --- [RMI TCP Connection(10)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://DESKTOP-LKEEB7S:8888/
+2019-06-03 16:11:35.644  INFO 67992 --- [RMI TCP Connection(10)-127.0.0.1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
+2019-06-03 16:11:35.939  INFO 67992 --- [RMI TCP Connection(10)-127.0.0.1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-06-03 16:11:35.945  INFO 67992 --- [RMI TCP Connection(10)-127.0.0.1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-06-03 16:16:31.559  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:21:31.562  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:26:31.565  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:31:31.568  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:36:31.572  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:41:31.576  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:46:31.577  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:51:31.580  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 16:56:31.581  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:01:31.585  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:06:31.586  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:11:31.589  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:16:31.590  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:21:31.592  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:26:31.594  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:31:31.596  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:36:31.600  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:41:31.602  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:46:31.605  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:51:31.607  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 17:56:31.610  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:01:31.612  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:06:31.614  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:11:31.617  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:16:31.620  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:21:31.623  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:26:31.626  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:31:31.629  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:36:31.633  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:41:31.635  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:46:31.638  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:51:31.641  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 18:56:31.644  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 19:01:31.647  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 21:36:42.657  WARN 67992 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h31m43s929ms348µs300ns).
+2019-06-03 21:37:45.572  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 21:42:45.575  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 21:47:45.592  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 21:52:45.601  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 21:57:45.604  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:02:45.607  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:07:45.610  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:12:45.614  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:17:45.616  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:22:45.621  INFO 67992 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:25:31.172  INFO 70372 --- [main] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-03 22:25:34.317  INFO 70372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$3f6c3740] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 22:25:34.384  INFO 70372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$65c2a218] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 22:25:36.940  INFO 70372 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-03 22:25:37.229  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-03 22:25:37.878  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-03 22:25:37.880  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-03 22:25:38.718  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-03 22:25:38.720  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-03 22:25:39.873  INFO 70372 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:25:40.816  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-03 22:25:40.826  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-03 22:25:40.828  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-03 22:25:40.829  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-03 22:25:40.831  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-03 22:25:40.832  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-03 22:25:40.834  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-03 22:25:42.622  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-03 22:25:42.635  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-06-03 22:25:42.653  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1559571942649 with initial instances count: 6
+2019-06-03 22:25:46.220  INFO 70372 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://DESKTOP-LKEEB7S:8888/
+2019-06-03 22:25:51.506  INFO 70372 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=mysql, profiles=[pro], label=master, version=b9bfe6f80275744b1f5e6cc9ad2a1b85f8576e25, state=null
+2019-06-03 22:25:51.511  INFO 70372 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/chenshi91/mydytt-config.git/dytt/mysql-pro.properties'}]}
+2019-06-03 22:25:51.704  INFO 70372 --- [main] com.dytt.module.test.TestApplication     : The following profiles are active: eureka,mail,redis,kafka,hystrix,test1
+2019-06-03 22:25:55.150  WARN 70372 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.dytt.test.mvc.dao]' package. Please check your configuration.
+2019-06-03 22:25:57.524  INFO 70372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-03 22:25:57.547  INFO 70372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-03 22:25:57.839  INFO 70372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127ms. Found 0 repository interfaces.
+2019-06-03 22:25:58.638  WARN 70372 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-06-03 22:26:01.017  INFO 70372 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=767556b9-5c1c-3707-b34f-b2bf3214af0c
+2019-06-03 22:26:01.313  INFO 70372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$1d5ab09e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 22:26:01.551  INFO 70372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$49a89f1b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 22:26:01.822  INFO 70372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$65c2a218] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-03 22:26:04.345  INFO 70372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8087 (http)
+2019-06-03 22:26:04.611  INFO 70372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-03 22:26:04.613  INFO 70372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-06-03 22:26:04.660  INFO 70372 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;D:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\39248\AppData\Local\Microsoft\WindowsApps;C:\Users\39248\AppData\Roaming\npm;.]
+2019-06-03 22:26:05.762  INFO 70372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-03 22:26:05.764  INFO 70372 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13874 ms
+2019-06-03 22:26:06.450  WARN 70372 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-03 22:26:06.451  INFO 70372 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-03 22:26:06.496  INFO 70372 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5664c7e0
+2019-06-03 22:26:12.115  INFO 70372 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-03 22:26:14.926  INFO 70372 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-03 22:26:16.748  WARN 70372 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-03 22:26:16.750  INFO 70372 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-03 22:26:17.992  INFO 70372 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-03 22:26:19.506  INFO 70372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-03 22:26:19.517  WARN 70372 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-06-03 22:26:20.670  INFO 70372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-03 22:26:23.409  INFO 70372 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2019-06-03 22:26:26.052  WARN 70372 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-03 22:26:26.391  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-03 22:26:26.418  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-03 22:26:26.552  INFO 70372 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-06-03 22:26:27.660  INFO 70372 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-03 22:26:27.669  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-03 22:26:27.678  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-03 22:26:27.678  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-03 22:26:27.680  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-03 22:26:27.680  INFO 70372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-03 22:26:27.982  INFO 70372 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-03 22:26:27.986  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-03 22:26:27.987  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-03 22:26:27.988  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-03 22:26:27.988  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-03 22:26:27.988  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-03 22:26:27.990  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-03 22:26:27.991  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-03 22:26:28.008  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-03 22:26:28.012  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-03 22:26:28.023  INFO 70372 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-03 22:26:28.028  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1559571988028 with initial instances count: 6
+2019-06-03 22:26:28.036  INFO 70372 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application service-demo with eureka with status UP
+2019-06-03 22:26:28.037  INFO 70372 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1559571988037, current=UP, previous=STARTING]
+2019-06-03 22:26:28.043  INFO 70372 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087: registering service...
+2019-06-03 22:26:28.273  INFO 70372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8087 (http) with context path ''
+2019-06-03 22:26:28.276  INFO 70372 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-DEMO/192.168.240.1:8087 - registration status: 204
+2019-06-03 22:26:28.282  INFO 70372 --- [main] com.dytt.module.test.TestApplication     : Started TestApplication in 65.632 seconds (JVM running for 127.627)
+2019-06-03 22:26:31.689  WARN 70372 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=service-demo, managementUrl=http://192.168.240.1:8087/actuator, healthUrl=http://192.168.240.1:8087/actuator/health, serviceUrl=http://192.168.240.1:8087/) at spring-boot-admin ([http://localhost:8000/instances]): I/O error on POST request for "http://localhost:8000/instances": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect. Further attempts are logged on DEBUG level

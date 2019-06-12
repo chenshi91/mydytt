@@ -1,0 +1,11 @@
+{
+  "index":"index_topic",
+  "type":"topic",
+  "source":{
+    "id":"150",
+    "name":"周润发",
+    "address":"香港",
+    "age":"32",
+    "movie":"<<满城黄金甲>>"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layer弹窗</title>
+    <script src="/layui/layui.js"></script>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div    class="layui-fluid">
+    <div    class="layui-row layui-col-space10">
+        <div    class="layui-col-md5 layui-bg-green">
+           <div class="layui-row">
+               <div class="layui-col-md3 layui-bg-black">black</div>
+               <div class="layui-col-md5 blue">blue</div>
+               <div class="layui-col-md4 layui-bg-red">red</div>
+               <div class="layui-col-md6 layui-bg-black">black</div>
+               <div class="layui-col-md6 layui-bg-green">green</div>
+           </div>
+        </div>
+
+        <div    class="layui-col-md7  layui-bg-orange">
+            <form class="layui-form" >
+                <select class="layui-select-none" lay-filter="selectFilter">
+                    <option >111</option>
+                    <option >222</option>
+                </select>
+                <button class="layui-btn" lay-submit lay-filter="submitFiler" >layerButton</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    layui.use(['layer','form','element'],function () {
+        var layer = layui.layer;
+        var form = layui.form;
+        // layer.msg("layer------11")
+        form.on('submit(submitFiler)',function () {
+            debugger
+            // layer.confirm("aaa");
+            layer.open({
+                type:1,
+                title:"我是layer标题",
+                content:"我是layer填充内容",
+                btn:['a','b','c'],
+                btn1:function(){
+                    layer.msg("aaaa");
+                },
+                btn2:function(){
+                    layer.msg("bbbb");
+                },
+                btn3:function(){
+                    layer.msg("ccccccc");
+                },
+                cancel:function(){
+                    layer.msg("关闭弹窗");
+                },
+            });
+            // $.get("localhost:8010/hi",{},function (res) {
+            //     console.info(res);
+            //
+            // });
+        });
+        
+        form.on('select(selectFilter)',function () {
+            debugger;
+            layer.open({
+                type:2,
+                area:["600px","400px"],
+                skin:"layui-layer-molv",
+                title:"修改用户",
+                content:"http://localhost:8010/html/demo.html",
+                btn:["qqq","aaa","zzz"]
+            })
+        });
+    })
+</script>
+</body>
+</html>
+
+

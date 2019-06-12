@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>表格数据</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div  class="layui-fluid"  id="test">
+    <div    class="layui-row layui-bg-gray">
+        <form  id="movie-form">
+            <div    class="layui-col-md1">
+                <button class="layui-btn" lay-submit lay-filter="formFilter">搜索</button>
+            </div>
+            <div    class="layui-col-md3">
+                <input type="text" name="movieName" placeholder="请输入" autocomplete="off" class="layui-input search-input">
+            </div>
+        </form>
+
+
+
+        <div    class="layui-col-md12 ">
+            <table class="layui-layer-tabli" lay-skin="row" id="data-table" lay-filter="tableFilter">
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="/layui/layui.js"></script>
+<!-- 你的HTML代码 -->
+<script>
+    layui.config({
+        base:"../../global/",
+    });
+    layui.use(['table','form','global','layer'],function () {
+        var table = layui.table,form=layui.form,layer=layui.layer,
+        $=layui.$,global=layui.global;
+        var movieTable = table.render({
+            elem:'#data-table',
+            url:global.ip_host+"/movie/page",
+            request:global.request,
+            response:global.response,
+            parseData:global.parseData,
+            // height:600,
+            // width:500,
+            size:"lg",
+            page:true,
+            cols:[[
+                // {field:'id',width:200,sort:true},
+                {field:'title',width:500,type:'normal'},
+                {field:'createDate',width:200,event:'go'},
+                // {field:'sex',width:80,title:'性别',templet:"#sexTpl"},
+                // {fixed: 'right', width:180, align:'center',title:'操作', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+            ]],
+
+        });
+
+        form.on('submit(formFilter)',function (data) {
+            debugger;
+            var movieName = $("#movie-form [name=movieName]").val();
+            var formDate = data.field;
+            movieTable.reload({
+                where:{
+                    movieName:movieName,
+                }
+            });
+            //阻止跳转页面(刷新)
+            return false;
+        });
+
+        table.on('row(tableFilter)',function (obj) {
+            var movieId = obj.id;
+            var data1 = obj.data;
+            //1,将数据缓存进session
+            layui.sessionData('movie',obj.data);
+            var data = layui.sessionData('movie');
+            //2,跳转到详情页面,获取id查询详情
+            location.href="movie.html"
+            debugger;
+
+
+
+        })
+
+
+
+    });
+</script>
+</body>
+</html>
+
+

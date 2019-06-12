@@ -14,10 +14,11 @@ public class RestTempleteController {
     @Autowired
     RestTemplate restTemplate;
 
+
     //    @HystrixCommand(fallbackMethod = "errorMethod")
     @GetMapping(value = {"/hi"})
     public JSONObject hi() {
-        ResponseEntity<JSONObject> responseEntity = restTemplate.getForEntity("http://service-demo/detail/1", JSONObject.class);
+        ResponseEntity<JSONObject> responseEntity = restTemplate.getForEntity("http://service-stream/detail/1", JSONObject.class);
         return responseEntity.getBody();
 
     }
@@ -28,4 +29,7 @@ public class RestTempleteController {
         jsonObject.put("msg", "熔断器起效了223333");
         return jsonObject;
     }
+
+
+
 }

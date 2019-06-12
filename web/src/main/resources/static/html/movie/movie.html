@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>df</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div  class="layui-fluid"  id="test">
+    <div    class="layui-row layui-bg-blue">
+        <form   class="layui-form" lay-filter="formFilter">
+
+            <div    class="layui-col-md10 ">
+                标题:<input name="title"/>
+            </div>
+            <div    class="layui-col-md10 ">
+                导演:<input name="name"/>
+            </div>
+            <div    class="layui-col-md10 ">
+                主演:xxx
+            </div>
+            <div    class="layui-col-md10 ">
+                年代:xxx
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="/layui/layui.js"></script>
+<!-- 你的HTML代码 -->
+<script>
+    layui.config({
+        base:"../../global/",
+    });
+    layui.use(['form','global'],function () {
+        var form = layui.form,
+        global=layui.global;
+        debugger
+        var data = layui.sessionData('movie');
+        form.val('formFilter',{
+            title:data.title,
+            name:data.name,
+        })
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
+
+

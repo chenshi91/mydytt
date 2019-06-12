@@ -27,7 +27,7 @@
 
         <!---断路器(hystrix)-->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.netflix.hystrix</groupId>
             <artifactId>hystrix-javanica</artifactId>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>com.cmss</groupId>

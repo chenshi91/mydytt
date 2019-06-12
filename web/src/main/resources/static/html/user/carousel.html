@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>carousel</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-carousel" id="test" lay-filter="carouselFilter">
+    <div carousel-item="">
+        <div><a href="form.html"><img class="layui-upload-img" src="https://app.public.zhuiyinanian.com/ce54689e-03f8-40d1-84a4-48869427f67d.png" width="400px"></a></div>
+        <div><img class="layui-upload-img" src="https://app.public.zhuiyinanian.com/c4d12261-afce-4909-9ed3-8c00dde8382a.jpg" width="400px"></div>
+        <div><img class="layui-upload-img" src="https://app.public.zhuiyinanian.com/a1052ea2-0482-46d9-9ea6-8ae775c61e3a.jpg" width="400px"></div>
+        <div><img class="layui-upload-img" src="https://app.public.zhuiyinanian.com/6866a58f-4852-4afa-94b4-b5ea3ade476c.jpg" width="400px"></div>
+        <div><img class="layui-upload-img" src="https://app.public.zhuiyinanian.com/c241c430-b280-48a6-9821-5898c728be2f.jpeg" width="400px"></div>
+    </div>
+</div>
+
+<!--<img  src="https://app.public.zhuiyinanian.com/ce54689e-03f8-40d1-84a4-48869427f67d.png",-->
+     <!--width="150px",height="30px">-->
+<script src="/layui/layui.js"></script>
+<!-- 你的HTML代码 -->
+<script>
+    layui.use(['layer', 'carousel'],function () {
+        var layer = layui.layer,
+            carousel = layui.carousel;
+        layer.msg("Hello World!");
+
+        //建造实例
+        carousel.render({
+            elem: '#test'
+            ,width: '100%' //设置容器宽度
+            ,arrow: 'always' //始终显示箭头
+            ,anim: 'default' //切换动画方式
+            ,width:"400px"
+            ,height:"250px"
+        });
+
+        carousel.on('change(carouselFilter)',function (obj) {
+            debugger;
+        })
+
+
+    });
+</script>
+</body>
+</html>
+
+
