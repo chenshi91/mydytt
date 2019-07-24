@@ -6,11 +6,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dytt.common.mvc.BaseController;
-import com.dytt.common.mvc.BaseService;
 import com.dytt.common.mvc.ResponseResult;
+import com.dytt.common.utils.MapUtil;
 import com.dytt.module.movie.entity.Movie;
 import com.dytt.module.movie.service.MovieService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,18 +25,17 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+@Slf4j
 @RestController
 public class MovieController extends BaseController<Movie> {
-
-    @Override
-    protected BaseService<Movie> getService() {
-        return movieService;
-    }
 
 
     @Autowired
     MovieService movieService;
+    @Autowired
+    RedisTemplate   redisTemplate;
 //    @Autowired
 //    DemoRemoteService demoService;
 
@@ -92,21 +93,39 @@ public class MovieController extends BaseController<Movie> {
         return new ResponseResult(movieList);
     }
 
-    //    @Cacheable(value = {"movie"}, key = "#pageNo/#pageSize")
+//        @Cacheable(value = {"movie"}, key = "#pageNo/#pageSize")
     @GetMapping(value = {"/page"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
     public ResponseResult listWithPage(@RequestParam("pageNo") int pageNo,
                                        @RequestParam("pageSize") int pageSize,
                                        @RequestParam(value = "movieName",required = false) String   movieName) {
         Movie movie = new Movie();
         IPage<Movie> movieIPage = movieService.page(new Page<>(pageNo, pageSize),
-                new QueryWrapper<Movie>().like(movieName!=null,"title",movieName));
+                new QueryWrapper<Movie>()
+                        .like(movieName!=null,"title",movieName)
+                .orderByDesc("create_date")
+        );
         return new ResponseResult(movieIPage);
     }
 
     //    @Cacheable(value = {"movie"}, key = "#id")
     @GetMapping(value = {"/selectById/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
     public ResponseResult selectById(@PathVariable Long id) {
-        return new ResponseResult(movieService.getById(id));
+        Object movie = redisTemplate.opsForValue().get(RedisConstance.SELECTBYID + id);
+        if (movie==null) {
+            movie = movieService.getById(id);
+            redisTemplate.opsForValue().set(RedisConstance.SELECTBYID+id,movie);
+            redisTemplate.expire(RedisConstance.SELECTBYID+id,24,TimeUnit.HOURS);
+        }
+        Object viewCount = redisTemplate.opsForValue().get(RedisConstance.viewcount + id);
+        if (viewCount==null) {
+            viewCount=1;
+            redisTemplate.opsForValue().set(RedisConstance.viewcount + id,viewCount);
+        }
+        if (viewCount.equals(100)) {
+            log.info("浏览量>100,同步db");
+        }
+        redisTemplate.opsForValue().increment(RedisConstance.viewcount + id);
+        return new ResponseResult(MapUtil.toMap(movie).put("viewCount",viewCount));
     }
 
 //    @GetMapping(value = {"/stream/selectById/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})

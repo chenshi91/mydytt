@@ -28,6 +28,7 @@ public class PushListener {
         //调用个信sdk发送消息给app
         IGtPush push = new IGtPush("", "");
 //        push.pushMessageToList("",new List<Target>);
+//        APN
 
     }
 

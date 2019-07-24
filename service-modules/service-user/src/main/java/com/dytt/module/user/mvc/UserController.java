@@ -8,7 +8,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dytt.bridge.services.EsRemoteService;
 import com.dytt.bridge.services.MovieRemoteService;
 import com.dytt.common.mvc.BaseController;
-import com.dytt.common.mvc.BaseService;
 import com.dytt.common.mvc.ResponseResult;
 import com.dytt.common.utils.JsonUtil;
 import com.dytt.common.utils.StringUtil;
@@ -86,10 +85,6 @@ public class UserController extends BaseController {
 //        return responseResult;
 //    }
 
-    @Override
-    protected BaseService getService() {
-        return null;
-    }
 
 
     @GetMapping(value = {"/movie/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})

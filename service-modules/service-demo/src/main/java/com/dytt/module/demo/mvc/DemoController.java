@@ -2,7 +2,6 @@
 package com.dytt.module.demo.mvc;
 
 import com.dytt.common.mvc.BaseController;
-import com.dytt.common.mvc.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,10 +10,6 @@ public class DemoController extends BaseController<Demo> {
     @Autowired
     DemoService demoService;
 
-    @Override
-    protected BaseService<Demo> getService() {
-        return demoService;
-    }
 
     @PostMapping(value = {"/add"})
     public Boolean add(@RequestBody Demo demo) {

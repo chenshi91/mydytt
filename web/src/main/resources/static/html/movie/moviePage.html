@@ -35,7 +35,7 @@
     });
     layui.use(['table','form','global','layer'],function () {
         var table = layui.table,form=layui.form,layer=layui.layer,
-        $=layui.$,global=layui.global;
+        $=layui.jquery,global=layui.global;
         var movieTable = table.render({
             elem:'#data-table',
             url:global.ip_host+"/movie/page",
@@ -71,12 +71,27 @@
 
         table.on('row(tableFilter)',function (obj) {
             var movieId = obj.id;
-            var data1 = obj.data;
+            var data = obj.data;
             //1,将数据缓存进session
-            layui.sessionData('movie',obj.data);
-            var data = layui.sessionData('movie');
+            $.ajax({
+                url:global.ip_host+"/movie/selectById/"+data.id,
+                type:"GET",
+                dataType:"json",
+                success:function (data) {
+                    console.info(data);
+                },
+                // error:function (data) {
+                //     console.info(data);
+                // },
+
+            });
+            // layui.sessionData('movie',JSON.parse(data1));
+            layui.sessionData('temData',{
+                key:"movie",
+                value:data
+            });
             //2,跳转到详情页面,获取id查询详情
-            location.href="movie.html"
+            location.href="movie.html";
             debugger;
 
 

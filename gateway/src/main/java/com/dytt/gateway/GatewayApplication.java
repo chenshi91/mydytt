@@ -39,6 +39,10 @@ public class GatewayApplication {
                 p.path("/test/**")
                         .filters(f -> f.stripPrefix(1))
                         .uri("lb://SERVICE-TEST"));
+        routes.route(p ->
+                p.path("/es/**")
+                        .filters(f -> f.stripPrefix(1))
+                        .uri("lb://SERVICE-MODULE-ES"));
         routes.route(p->
             p.path("/stream/**")
                     .filters(url->url.stripPrefix(1))

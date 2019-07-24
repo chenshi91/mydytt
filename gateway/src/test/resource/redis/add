@@ -1,0 +1,11 @@
+{
+  "name":"chenshi",
+  "age":10,
+  "gf":{
+    "name":"jing",
+    "age":22
+  },
+  "mylist":["a","b","c","c"],
+  "myset":["a","b","c","c"],
+  "expire":10
+}

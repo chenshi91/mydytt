@@ -23,7 +23,7 @@ import java.util.Map;
 @Slf4j
 @RestController()
 @RequestMapping(produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
-public class EsResource {
+public class EsController {
 
     @Autowired
     EsUtil  esUtil;

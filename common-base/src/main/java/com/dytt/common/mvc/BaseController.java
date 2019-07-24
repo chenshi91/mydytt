@@ -2,7 +2,7 @@
 package com.dytt.common.mvc;
 
 public abstract class BaseController<T> {
-    protected abstract BaseService<T> getService();
+//    protected abstract BaseService<T> getService();
 
 //    /**
 //     * 查详情

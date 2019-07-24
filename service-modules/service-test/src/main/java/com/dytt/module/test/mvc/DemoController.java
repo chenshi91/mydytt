@@ -33,10 +33,6 @@ public class DemoController extends BaseController<Demo> {
     @Autowired
     MovieRemoteService movieService;
 
-    @Override
-    protected BaseService<Demo> getService() {
-        return demoService;
-    }
 
     @PostMapping(value = {"/add"})
     public ResponseResult add(@RequestBody Demo demo
