@@ -2,6 +2,8 @@
 package com.cmss.ribbon;
 
 import com.alibaba.fastjson.JSONObject;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +16,10 @@ public class RestTempleteController {
     @Autowired
     RestTemplate restTemplate;
 
-
-    //    @HystrixCommand(fallbackMethod = "errorMethod")
+    //个性化线程池隔离，超时时间设置，可以对接口请求的粒度更细
+    @HystrixCommand(fallbackMethod = "errorMethod",threadPoolKey = "demoThreadPool",commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "2000")
+    })
     @GetMapping(value = {"/hi"})
     public JSONObject hi() {
         ResponseEntity<JSONObject> responseEntity = restTemplate.getForEntity("http://service-stream/detail/1", JSONObject.class);
