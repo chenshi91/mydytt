@@ -4,10 +4,7 @@ package com.common.test.base;
 import com.alibaba.fastjson.JSONObject;
 import com.dytt.common.mvc.BaseEntity;
 import com.dytt.common.test.BaseTest;
-import com.dytt.common.utils.ExcelUtil;
-import com.dytt.common.utils.JsonUtil;
-import com.dytt.common.utils.MapUtil;
-import com.dytt.common.utils.StringUtil;
+import com.dytt.common.utils.*;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +27,7 @@ public class UtilsTest extends BaseTest {
 
     @Test
     public void readExcel(){
+
         File file = new File("C:\\Users\\39248\\Desktop\\didian7.xlsx");
         List<String[]> strings = ExcelUtil.readExcel(file);
         log.info(strings.toString());
@@ -90,6 +88,12 @@ public class UtilsTest extends BaseTest {
         JSONObject jsonObject = MapUtil.toJson(map);
     }
 
+    @Test
+    public void down(){
+        String httpurl = UrlUtil.thunderurlToHttpurl("thunder://QUFodHRwOi8veHozLTgub2t6eXh6LmNvbS8yMDE5MDUxNy84NDg5X2IzZmMyNzQ2L7yyy9mxuNW9LUhDLm1wNFpa");
+        String fileName = httpurl.split("/")[httpurl.split("/").length - 1];
+        DownloadUtil.download(httpurl,"D:\\jisu.mp4");
+    }
 
     @Override
     protected ClassLoader getClassLoader() {

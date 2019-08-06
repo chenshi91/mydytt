@@ -18,10 +18,10 @@ public class MybatisPlusConfig {
 
     @Bean
     public MybatisSqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
-        MybatisSqlSessionFactoryBean factory = new MybatisSqlSessionFactoryBean();
-        factory.setDataSource(dataSource);
-        factory.setPlugins(new Interceptor[]{this.paginationInterceptor()});
-        return factory;
+        return new MybatisSqlSessionFactoryBean(){{
+            setDataSource(dataSource);
+            setPlugins(new Interceptor[]{paginationInterceptor()});
+        }};
     }
 
     /**
@@ -30,9 +30,9 @@ public class MybatisPlusConfig {
      * @return
      */
     private PaginationInterceptor paginationInterceptor() {
-        PaginationInterceptor page = new PaginationInterceptor();
-        page.setDialectType("mysql");
-        return page;
+        return new PaginationInterceptor(){{
+            setDialectType("mysql");
+        }};
     }
 
 }

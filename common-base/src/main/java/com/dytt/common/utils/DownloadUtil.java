@@ -7,7 +7,6 @@ import org.springframework.web.client.RequestCallback;
 import org.springframework.web.client.ResponseExtractor;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -27,11 +26,6 @@ public class DownloadUtil {
      *                     String  downLocation="D:\\idea.exe";
      */
     public static void download(String downUrl, String downLocation) {
-        //1,先判断文件是否存在,若存在则先删除原文件
-        File file = new File(downLocation);
-        if (file.exists()) {
-            file.delete();
-        }
         //定义请求头的接收类型
         RequestCallback requestCallback = request -> request.getHeaders()
                 .setAccept(Arrays.asList(MediaType.APPLICATION_OCTET_STREAM, MediaType.ALL));

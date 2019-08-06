@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author chenshi
  * @date 2019-06-20
  */
-public class AutoGeneratorDemo {
+public class MybatisplusAutoGenerator {
 
     @Test
     public void system() {
