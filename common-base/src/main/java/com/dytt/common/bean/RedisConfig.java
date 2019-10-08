@@ -18,14 +18,14 @@ public class RedisConfig {
     @Bean
     @Primary
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
-        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
-        redisTemplate.setConnectionFactory(connectionFactory);
-        redisTemplate.afterPropertiesSet();
-        // redis存取对象的关键配置
-        redisTemplate.setKeySerializer(new StringRedisSerializer());
-        // ObjectRedisSerializer类为java对象的序列化和反序列化工具类
-        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
-        return redisTemplate;
+        return new RedisTemplate<String, Object>(){{
+            setConnectionFactory(connectionFactory);
+            afterPropertiesSet();
+            // redis存取对象的关键配置
+            setKeySerializer(new StringRedisSerializer());
+            // ObjectRedisSerializer类为java对象的序列化和反序列化工具类
+            setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        }};
     }
 
 
