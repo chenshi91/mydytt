@@ -28,7 +28,7 @@ public class Demo extends BaseTest {
 
     @Test
     public void detail() {
-        super.httpRequestOfGet("/detail/4");
+        super.httpRequestOfGet("/selectById/4");
     }
 
     @Test

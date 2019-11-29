@@ -13,19 +13,12 @@
     <artifactId>mydytt</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>eureka-center</module>
-        <module>ribbon</module>
-        <module>feign</module>
-        <module>zuul</module>
-        <module>config-server</module>
-        <module>config-client</module>
-        <module>admin</module>
         <module>rabbitMQ</module>
         <module>common-base</module>
         <module>web</module>
         <module>service-modules</module>
         <module>service-bridge</module>
-        <module>gateway</module>
+        <module>springCloud</module>
     </modules>
     <packaging>pom</packaging>
 

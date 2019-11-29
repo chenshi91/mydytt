@@ -12,8 +12,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableFeignClients(basePackages = {"com.dytt.bridge.services"})
 @EnableCaching
 @EnableAsync
-@MapperScan(basePackages = {"com.dytt.test.mvc.dao"})
-@ComponentScan(basePackages = {"com.dytt.test", "com.dytt.common.model"})
+@MapperScan(basePackages = {"mapper"})
+@ComponentScan(basePackages = {"com.dytt.common","com.dytt.module.test.mvc"})
 @SpringBootApplication
 @EnableEurekaClient
 public class TestApplication {

@@ -41,12 +41,12 @@ public class OptionalDemo extends Demo {
         list.add("wang5");
         Map<Integer, List<String>> map = list.stream()
                 .filter(s -> s.length() > 2)
-                .collect(Collectors.groupingBy(s -> s.length()));
+                .collect(Collectors.groupingBy(String::length));
 
 //        list.removeIf(s -> "li4".equals(s));
 //        list.stream().forEach(s -> log.info(s));
         String s = list.stream().findAny().orElse("default");
-        Map<Integer, List<String>> map1 = list.stream().collect(Collectors.groupingBy(s1 -> s1.length()));
+        Map<Integer, List<String>> map1 = list.stream().collect(Collectors.groupingBy(String::length));
         log.info(s);
     }
 

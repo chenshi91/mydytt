@@ -1,18 +1,17 @@
 /* created by chenshi at 2019-02-02 */
 package com.dytt.module.test.mvc;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.dytt.bridge.services.MovieRemoteService;
 import com.dytt.common.mvc.BaseController;
-import com.dytt.common.mvc.BaseService;
 import com.dytt.common.mvc.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.MediaType;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,20 +27,21 @@ public class DemoController extends BaseController<Demo> {
     DemoService demoService;
     @Autowired
     RedisTemplate redisTemplate;
-    @Autowired
-    CacheManager cacheManager;
-    @Autowired
-    MovieRemoteService movieService;
+//    @Autowired
+//    CacheManager cacheManager;
+//    @Autowired
+//    MovieRemoteService movieService;
 
 
     @PostMapping(value = {"/add"})
-    public ResponseResult add(@RequestBody Demo demo
-    ) {
+    public ResponseResult add(@Validated @RequestBody DemoForm demoForm) {
 //        if (bindingResult.hasErrors()) {
 //            return new ResponseResult("112233",
 //                    bindingResult.getAllErrors().get(0).getDefaultMessage());
 //        }
 //        HttpServletRequest request = WebUtils.getRequest();
+        Demo demo = new Demo();
+        BeanUtil.copyProperties(demoForm,demo);
         boolean insert = demoService.save(demo);
         return new ResponseResult(insert ? "ok" : "fail");
     }
@@ -65,8 +65,8 @@ public class DemoController extends BaseController<Demo> {
     @GetMapping(value = {"/movie/selectById/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
     public JSONObject detail2(@PathVariable int id, @RequestParam String name, @RequestParam String home, HttpServletRequest request) {
         String accept = request.getHeader("Accept");
-        JSONObject jsonObject = movieService.selectById(id);
-        return jsonObject;
+//        JSONObject jsonObject = movieService.selectById(id);
+        return null;
     }
 
     @GetMapping(value = {"/exceptionTest"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
