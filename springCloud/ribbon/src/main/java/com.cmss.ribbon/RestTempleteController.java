@@ -22,7 +22,7 @@ public class RestTempleteController {
     })
     @GetMapping(value = {"/hi"})
     public JSONObject hi() {
-        ResponseEntity<JSONObject> responseEntity = restTemplate.getForEntity("http://service-stream/detail/1", JSONObject.class);
+        ResponseEntity<JSONObject> responseEntity = restTemplate.getForEntity("http://api-stream/detail/1", JSONObject.class);
         return responseEntity.getBody();
 
     }

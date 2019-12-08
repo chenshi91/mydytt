@@ -4,7 +4,7 @@ package com.dytt.module.movie.service.impl;
 
 import com.dytt.common.mvc.BaseServiceImpl;
 import com.dytt.common.mvc.ResponseResult;
-import com.dytt.module.movie.dao.MovieMapper;
+import com.dytt.module.movie.mapper.MovieMapper;
 import com.dytt.module.movie.entity.Movie;
 import com.dytt.module.movie.service.MovieService;
 import org.slf4j.Logger;

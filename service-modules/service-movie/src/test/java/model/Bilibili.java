@@ -1,12 +1,6 @@
 /* created by chenshi at 2018-12-17 */
 package model;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.DomElement;
-import com.gargoylesoftware.htmlunit.html.DomNodeList;
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,23 +14,23 @@ import java.util.List;
 
 public class Bilibili {
 
-    @Test
-    public void sss() throws IOException {
-        String bilibiliUrl = "https://www.bilibili.com/v/life/funny/?spm_id_from=333.10.b_7375626e6176.2#/all/click/0/15/2017-08-10,2017-10-17";
-        String dyttUrl = "http://www.dy2018.com/";
-        /** HtmlUnit请求web页面 */
-        WebClient wc = new WebClient(BrowserVersion.CHROME);
-        wc.getOptions().setUseInsecureSSL(true);
-        wc.getOptions().setJavaScriptEnabled(true); // 启用JS解释器，默认为true
-        wc.getOptions().setCssEnabled(false); // 禁用css支持
-        wc.getOptions().setThrowExceptionOnScriptError(false); // js运行错误时，是否抛出异常
-        wc.getOptions().setTimeout(100000); // 设置连接超时时间 ，这里是10S。如果为0，则无限期等待
-        wc.getOptions().setDoNotTrackEnabled(false);
-        HtmlPage page = wc.getPage(bilibiliUrl);
-
-        DomNodeList<DomElement> links = page.getElementsByTagName("a");
-
-    }
+//    @Test
+//    public void sss() throws IOException {
+//        String bilibiliUrl = "https://www.bilibili.com/v/life/funny/?spm_id_from=333.10.b_7375626e6176.2#/all/click/0/15/2017-08-10,2017-10-17";
+//        String dyttUrl = "http://www.dy2018.com/";
+//        /** HtmlUnit请求web页面 */
+//        WebClient wc = new WebClient(BrowserVersion.CHROME);
+//        wc.getOptions().setUseInsecureSSL(true);
+//        wc.getOptions().setJavaScriptEnabled(true); // 启用JS解释器，默认为true
+//        wc.getOptions().setCssEnabled(false); // 禁用css支持
+//        wc.getOptions().setThrowExceptionOnScriptError(false); // js运行错误时，是否抛出异常
+//        wc.getOptions().setTimeout(100000); // 设置连接超时时间 ，这里是10S。如果为0，则无限期等待
+//        wc.getOptions().setDoNotTrackEnabled(false);
+//        HtmlPage page = wc.getPage(bilibiliUrl);
+//
+//        DomNodeList<DomElement> links = page.getElementsByTagName("a");
+//
+//    }
 
     @Test
     public void add() {

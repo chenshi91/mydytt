@@ -17,13 +17,13 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class CommonConfiguration {
 
-    @Bean
-    RestTemplate restTemplate() {
-        SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
-        requestFactory.setReadTimeout(1000);
-        requestFactory.setConnectTimeout(1000);
-        return new RestTemplate(requestFactory);
-    }
+//    @Bean
+//    RestTemplate restTemplate() {
+//        SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+//        requestFactory.setReadTimeout(1000);
+//        requestFactory.setConnectTimeout(1000);
+//        return new RestTemplate(requestFactory);
+//    }
 
     @Bean
     public RestRequestFilter restRequestFilter() {

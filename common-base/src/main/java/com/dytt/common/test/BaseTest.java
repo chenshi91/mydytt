@@ -2,129 +2,179 @@
 package com.dytt.common.test;
 
 import com.alibaba.fastjson.JSONObject;
-import com.dytt.common.constance.CommonResponse;
-import com.dytt.common.utils.LogUtil;
-import com.dytt.common.utils.StringUtil;
+import com.dytt.common.constance.ResponseResultConstance;
+import io.netty.util.internal.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.springframework.boot.web.client.RootUriTemplateHandler;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
-import org.springframework.http.client.support.BasicAuthorizationInterceptor;
+import org.springframework.http.client.support.BasicAuthenticationInterceptor;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
 import java.net.URLDecoder;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 @Slf4j
 public abstract class BaseTest {
-    public static final String NOT_IP = ":";
-    public static final String HTTP_LOCALHOST = "http://localhost:";
-    //    protected Logger logger = LoggerFactory.getLogger(BaseTest.class);
 
-    protected RestTemplate restTemplate = new RestTemplate();
+    protected RestTemplate restTemplate;
     protected HttpEntity httpEntity;
-    protected HttpHeaders httpHeaders = new HttpHeaders();
+    protected HttpHeaders httpHeaders;
+    protected Properties properties;
+    protected String ipHost;
 
-    protected abstract ClassLoader getClassLoader();
-
-    protected abstract String getIpHost();
 
     @Before
     public void before() {
-        //初始化url
-        String ipHost = getIpHost();
-        if (!ipHost.contains(NOT_IP)) {
-            log.info("-------没有设置ip----初始化ip:{}",HTTP_LOCALHOST);
-            ipHost= HTTP_LOCALHOST.concat(ipHost);
+        properties = getProperties("test.properties");
+        ipHost = properties.getProperty("ip_host");
+        if (StringUtils.isEmpty(ipHost)) {
+            log.info("-------没有设置ip:port-------------------");
+            throw new RuntimeException("没有设置ip端口号");
         }
-        RootUriTemplateHandler rootUriTemplateHandler = new RootUriTemplateHandler(ipHost);
-        restTemplate.setUriTemplateHandler(rootUriTemplateHandler);
-        log.info("----------初始化ipHost:"+ipHost);
-        //初始化interceptors
-        String username = "xujiali";
-        String password = "xjl";
-        ClientHttpRequestInterceptor auth1 = new BasicAuthorizationInterceptor(username, password);
-        List<ClientHttpRequestInterceptor> authorizationInterceptorList = new ArrayList<>(1);
-        authorizationInterceptorList.add(auth1);
-        restTemplate.setInterceptors(authorizationInterceptorList);
-        log.info("----------初始化interceptors:username="+username+",password="+password);
+        log.info("----------初始化ipHost:" + ipHost);
+        restTemplate = new RestTemplate() {{
+            setUriTemplateHandler(new RootUriTemplateHandler(ipHost));
+            setInterceptors(new ArrayList<ClientHttpRequestInterceptor>(1) {{
+                add(new BasicAuthenticationInterceptor("xjl", "123"));
+            }});
+        }};
         //设置token
-        String token = "123456";
-        httpHeaders.add("token", token);
-        log.info("----------初始化token:"+token);
+        httpHeaders = new HttpHeaders() {{
+            add("sign", properties.getProperty("sign"));
+            add("app-user-info-key", "123");
+        }};
+        log.info("----------初始化httpHeaders:{}", httpHeaders);
 
     }
 
     /**
      * GET
      *
-     * @param url 地址
-     * @param uriValiables  参数
-     * @return  返回值
+     * @param url          地址
+     * @param uriValiables 参数
+     * @return 返回值
      */
-    protected JSONObject httpRequestOfGet(String url, Object... uriValiables) {
+    protected ResponseEntity<JSONObject> httpRequestOfGET(String url, Object... uriValiables) {
         if (uriValiables == null) {
-            return httpRequest(url, null, HttpMethod.GET, "");
+            return httpRequest(url, null, null, HttpMethod.GET, true, "");
         }
-        return httpRequest(url, null, HttpMethod.GET, uriValiables);
+        return httpRequest(url, null, null, HttpMethod.GET, true, uriValiables);
     }
 
     /**
      * POST
      *
-     * @param url   地址
-     * @param requestJsonUrl    入参
-     * @return  出参
+     * @param url            地址
+     * @param requestJsonUrl 入参
+     * @return 出参
      */
-    protected JSONObject httpRequestOfPost(String url, String requestJsonUrl) {
-        return httpRequest(url, requestJsonUrl, HttpMethod.POST, "");
+    protected ResponseEntity<JSONObject> httpRequestOfPOST(String url, String requestJsonUrl) {
+        return httpRequest(url, requestJsonUrl, null, HttpMethod.POST, true, "");
     }
 
-    protected JSONObject httpRequest(String url, String requestJsonUrl, HttpMethod httpMethod, Object... uriValiables) {
+    protected ResponseEntity<JSONObject> httpRequestOfPOST(String url, HashMap<String, Object> files) {
+        return httpRequest(url, null, files, HttpMethod.POST, true, "");
+    }
+
+    protected ResponseEntity<JSONObject> httpRequest(String url, String requestJsonUrl, HashMap<String, Object> files, HttpMethod httpMethod, Boolean checkResCode, Object... uriValiables) {
         //获取json入参
         JSONObject requestParams = getJsonByUrl(requestJsonUrl);
-        //发送http请求
-        LogUtil.info("1,发送请求url:"+url+",入参:"+requestParams);
+
         httpEntity = new HttpEntity<>(requestParams, httpHeaders);
-        ResponseEntity<String> responseEntity = restTemplate.exchange(url, httpMethod, httpEntity, String.class, uriValiables);
-        String responseResult = responseEntity.getBody();
-        LogUtil.info("2,发送请求url:"+url+",出参:"+responseResult);
-        JSONObject response = JSONObject.parseObject(responseResult);
+        switch (httpMethod) {
+            case GET:
+                break;
+            case POST:
+                if (requestParams == null) {
+                    MultiValueMap<String, Object> form = new LinkedMultiValueMap<>();
+                    for (Map.Entry<String, Object> fileEntity : files.entrySet()) {
+                        form.add(fileEntity.getKey(), new FileSystemResource((String) fileEntity.getValue()));
+                    }
+                    httpEntity = new HttpEntity<>(form, httpHeaders);
+                }
+                break;
+            default:
+                break;
+        }
+        log.info("1,发送请求url:{},httpEntity:{}", url, httpEntity);
+        ResponseEntity<JSONObject> responseEntity = restTemplate.exchange(ipHost + url, httpMethod, httpEntity, JSONObject.class, uriValiables);
+        JSONObject response = responseEntity.getBody();
         //检查出参格式
-        checkResponseResult(response);
-        return response;
+        if (checkResCode) {
+            if (ResponseResultConstance.SUCCESS_CODE.equals(response.getString("code"))) {
+                log.info("2,检查出参成功！");
+            } else {
+                log.info("2,检查出参失败:{}", response);
+                throw new RuntimeException("检查出参失败");
+            }
+        }
+        log.info("start------------------------------------------------------------------------");
+        log.info("{");
+        for (Map.Entry<String, Object> entry : response.entrySet()) {
+            switch (entry.getKey()) {
+                case "data":
+                    if (entry != null && entry.getValue() instanceof LinkedHashMap) {
+                        log.info("  data:{");
+                        printResponse2Space((LinkedHashMap<String, Object>) entry.getValue());
+                        log.info("  }");
+                    } else {
+                        log.info("  data:{}", entry.getValue());
+                    }
+                    break;
+                case "_source":
+                    log.info("  _source:{");
+                    printResponse2Space((LinkedHashMap<String, Object>) entry.getValue());
+                    log.info("  }");
+                    break;
+                default:
+                    log.info("  {}:{}", entry.getKey(), entry.getValue());
+                    break;
+            }
+        }
+        log.info("}");
+        log.info("--------------------------------------------------------------------------end");
+        return responseEntity;
+    }
+
+    private void printResponse2Space(LinkedHashMap<String, Object> entry) {
+        for (Map.Entry<String, Object> dataEntity : entry.entrySet()) {
+            log.info("    {}:{}", dataEntity.getKey(), dataEntity.getValue());
+        }
     }
 
     private JSONObject getJsonByUrl(String requestJsonUrl) {
         if (StringUtils.isEmpty(requestJsonUrl)) {
             return null;
         }
-        String path = getClassLoader().getResource(requestJsonUrl).getPath();
+        String path = ClassUtils.getDefaultClassLoader().getResource(requestJsonUrl).getPath();
         JSONObject response = null;
         try {
             //处理中文空格占位符问题
             path = URLDecoder.decode(path, "utf-8");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
             StringBuffer requestParamsString = new StringBuffer();
-            String line="";
+            String line = "";
             do {
                 line = bufferedReader.readLine();
-                if (StringUtil.isNull(line)) {
+                if (StringUtil.isNullOrEmpty(line)) {
                     continue;
                 }
                 requestParamsString.append(line);
-            } while (!StringUtil.isNull(line));
+            } while (!StringUtil.isNullOrEmpty(line));
             response = JSONObject.parseObject(requestParamsString.toString());
-            LogUtil.info("-------------获取POST请求入参body成功！body:"+response.toJSONString());
+            log.info("-------------获取POST请求入参body成功！body:" + response.toJSONString());
             bufferedReader.close();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -136,22 +186,37 @@ public abstract class BaseTest {
         return response;
     }
 
-    private void checkResponseResult(JSONObject responseResult) {
-        if (CommonResponse.SUCCESS_CODE.equals(responseResult.getString("code"))) {
-            LogUtil.info("3,检查出参成功！,{}",responseResult);
-        }else {
-            throw   new  RuntimeException("检查出参失败");
-        }
-    }
-
     private Properties getProperties(String fileUrl) {
         Properties properties = null;
         try {
             properties = PropertiesLoaderUtils.loadAllProperties(fileUrl);
         } catch (IOException e) {
-            System.out.println(fileUrl + "文件未找到!");
+            log.info("{}文件未找到!", fileUrl);
             e.printStackTrace();
         }
         return properties;
     }
+
+    public void searchEs(String url, Object... params) {
+        reloadIpHost();
+        this.httpRequest(url, null, null, HttpMethod.GET, false, params == null ? "" : params);
+    }
+
+    protected void reloadIpHost() {
+        ipHost = properties.getProperty("ip_host_es");
+        restTemplate = new RestTemplate() {{
+            setUriTemplateHandler(new RootUriTemplateHandler(ipHost));
+            setInterceptors(new ArrayList<ClientHttpRequestInterceptor>(1) {{
+                add(new BasicAuthenticationInterceptor("xjl", "123"));
+            }});
+        }};
+        log.info("重置ip_host:{}", ipHost);
+    }
+
+    public void updateEs(String url, String requestJsonUrl) {
+        url = url.concat("/_update");
+        reloadIpHost();
+        this.httpRequest(url, requestJsonUrl, null, HttpMethod.POST, false);
+    }
+
 }

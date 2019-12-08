@@ -1,73 +1,45 @@
 /* created by chenshi at 2018-11-16 */
 package com.dytt.common.mvc;
 
-public abstract class BaseController<T> {
-//    protected abstract BaseService<T> getService();
+import com.dytt.common.constance.WebConstance;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
-//    /**
-//     * 查详情
-//     *
-//     * @param id
-//     * @return
-//     */
-//    public ResponseResult detail(Long id) {
-////        String simpleName = getService().getClass().getSimpleName();
-//        T entity = getService().selectById(id);
-//        return new ResponseResult(entity);
-//    }
-//
-//    /**
-//     * 查询列表
-//     *
-//     * @return
-//     */
-//    public ResponseResult list() {
-//        List list = getService().selectByCondition(null);
-//        return new ResponseResult(list);
-//    }
-//
-//    /**
-//     * 分页查询
-//     *
-//     * @return
-//     */
-//    public ResponseResult list(int pageNo, int pageSize, T t) {
-//        PageInfo<T> pageInfo = getService().selectByConditionWithPage(pageNo, pageSize, t);
-//        return new ResponseResult(pageInfo);
-//    }
-//
-//    /**
-//     * 添加
-//     *
-//     * @param params
-//     * @return
-//     */
-//    public ResponseResult insertSelective(T params) {
-//        getService().insertSelective(params);
-//        return new ResponseResult("添加数据成功!");
-//    }
-//
-//    /**
-//     * 修改
-//     *
-//     * @param t
-//     * @return
-//     */
-//    public ResponseResult updateByPrimaryKeySelective(T t) {
-//        getService().updateByPrimaryKeySelective(t);
-//        return new ResponseResult("修改数据成功!");
-//    }
-//
-//    /**
-//     * 删除
-//     *
-//     * @param id
-//     * @return
-//     */
-//    public ResponseResult delete(Long id) {
-//        getService().deleteByPrimaryKey(id);
-//        return new ResponseResult("删除数据成功!");
-//    }
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
+public abstract class BaseController {
+
+    public static HttpServletRequest getRequest() {
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        return requestAttributes == null ? null : ((ServletRequestAttributes) requestAttributes).getRequest();
+    }
+
+    public static HttpServletResponse getResponse() {
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        return requestAttributes == null ? null : ((ServletRequestAttributes) requestAttributes).getResponse();
+    }
+
+    public static String getRequestId() {
+        Object requestId = getRequest().getAttribute(WebConstance.REQUEST_ID);
+        if (requestId == null) {
+            requestId = System.currentTimeMillis();
+            getRequest().setAttribute(WebConstance.REQUEST_ID, requestId);
+        }
+        return "" + requestId;
+    }
+
+    public static String getIp() {
+        String ip = null;
+        try {
+            ip = InetAddress.getLocalHost().getHostAddress().toString();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return ip;
+    }
 
 }

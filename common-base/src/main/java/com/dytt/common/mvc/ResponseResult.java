@@ -1,7 +1,7 @@
 /* created by chenshi at 2019-02-16 */
 package com.dytt.common.mvc;
 
-import com.dytt.common.constance.CommonResponse;
+import com.dytt.common.constance.ResponseResultConstance;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -10,23 +10,23 @@ import java.io.Serializable;
  * 出参格式
  */
 @Data
-public class ResponseResult implements Serializable {
+public class ResponseResult<T> implements Serializable {
 
     private String code;
     private String msg;
-    private Object data;
+    private T data;
     private String port;
     private String applicationName;
 
 
-    public ResponseResult(Object data) {
-        this.code = CommonResponse.SUCCESS_CODE;
-        this.msg = CommonResponse.SUCCESS_MSG;
+    public ResponseResult(T data) {
+        this.code = ResponseResultConstance.SUCCESS_CODE;
+        this.msg = ResponseResultConstance.SUCCESS_MSG;
         this.data = data;
     }
 
     public ResponseResult(String msg) {
-        this.code = CommonResponse.SUCCESS_CODE;
+        this.code = ResponseResultConstance.SUCCESS_CODE;
         this.msg = msg;
     }
 
@@ -35,7 +35,7 @@ public class ResponseResult implements Serializable {
         this.msg = msg;
     }
 
-    public ResponseResult(String code, String msg, Object data) {
+    public ResponseResult(String code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;

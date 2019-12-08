@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dytt.common.mvc.BaseController;
 import com.dytt.common.mvc.ResponseResult;
 import com.dytt.common.utils.MapUtil;
+import com.dytt.module.movie.mapper.MovieMapper;
 import com.dytt.module.movie.entity.Movie;
 import com.dytt.module.movie.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,11 +30,13 @@ import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @RestController
-public class MovieController extends BaseController<Movie> {
+public class MovieController extends BaseController {
 
 
     @Autowired
     MovieService movieService;
+    @Autowired
+    MovieMapper movieMapper;
     @Autowired
     RedisTemplate   redisTemplate;
 //    @Autowired
@@ -98,12 +101,12 @@ public class MovieController extends BaseController<Movie> {
     public ResponseResult listWithPage(@RequestParam("pageNo") int pageNo,
                                        @RequestParam("pageSize") int pageSize,
                                        @RequestParam(value = "movieName",required = false) String   movieName) {
-        Movie movie = new Movie();
-        IPage<Movie> movieIPage = movieService.page(new Page<>(pageNo, pageSize),
+        IPage<Movie> movieIPage = movieMapper.selectPage(new Page<>(pageNo, pageSize),
                 new QueryWrapper<Movie>()
                         .like(movieName!=null,"title",movieName)
                 .orderByDesc("create_date")
         );
+        IPage<Movie> page = movieService.page(new Page<>(1, 5));
         return new ResponseResult(movieIPage);
     }
 
@@ -126,16 +129,6 @@ public class MovieController extends BaseController<Movie> {
         }
         redisTemplate.opsForValue().increment(RedisConstance.viewcount + id);
         return new ResponseResult(MapUtil.toMap(movie).put("viewCount",viewCount));
-    }
-
-//    @GetMapping(value = {"/stream/selectById/{id}"}, produces = {MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE})
-//    public ResponseResult selectById2(@PathVariable int id) {
-//        return new ResponseResult(demoService.selectById(id));
-//    }
-
-    @GetMapping(value = {"/hi"})
-    public String hi() {
-        return "hi,i back home ! hn32297";
     }
 
 }

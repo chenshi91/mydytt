@@ -32,12 +32,6 @@ public abstract class BaseTest {
     protected Properties properties;
     protected String ipHost;
 
-    protected abstract ClassLoader getClassLoader();
-
-    protected abstract String getAppUserInfoKey();
-
-    protected abstract String getSucResponseCode();
-
     @Before
     public void before() {
         properties = getProperties("test.properties");
@@ -56,7 +50,7 @@ public abstract class BaseTest {
         //设置token
         httpHeaders = new HttpHeaders() {{
             add("sign", properties.getProperty("sign"));
-            add("app-user-info-key", getAppUserInfoKey());
+            add("app-user-info-key", "123");
         }};
         log.info("----------初始化httpHeaders:{}", httpHeaders);
 
@@ -116,7 +110,7 @@ public abstract class BaseTest {
         JSONObject response = responseEntity.getBody();
         //检查出参格式
         if (checkResCode) {
-            if (getSucResponseCode().equals(response.getString("code"))) {
+            if ("000000".equals(response.getString("code"))) {
                 log.info("2,检查出参成功！");
             } else {
                 log.info("2,检查出参失败:{}", response);
@@ -157,7 +151,7 @@ public abstract class BaseTest {
         if (StringUtils.isEmpty(requestJsonUrl)) {
             return null;
         }
-        String path = getClassLoader().getResource(requestJsonUrl).getPath();
+        String path = BaseTest.class.getResource(requestJsonUrl).getPath();
         JSONObject response = null;
         try {
             //处理中文空格占位符问题

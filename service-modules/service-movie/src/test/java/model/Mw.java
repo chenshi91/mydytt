@@ -2,6 +2,7 @@
 package model;
 
 import com.alibaba.fastjson.JSONObject;
+import com.dytt.common.test.BaseTest;
 import org.junit.Test;
 
 public class Mw extends BaseTest {
@@ -9,17 +10,9 @@ public class Mw extends BaseTest {
     @Test
     public void aa() {
         String bilibiliUrl = "https://www.bilibili.com/v/life/funny/?spm_id_from=333.10.b_7375626e6176.2#/all/click/0/15/2017-08-10,2017-10-17";
-        JSONObject jsonObject = super.httpRequestOfGet(bilibiliUrl, null);
+        JSONObject jsonObject = super.httpRequestOfGET(bilibiliUrl, null).getBody();
         JSONObject data = jsonObject.getJSONObject("data");
     }
-
-
-    @Override
-    protected ClassLoader getClassLoader() {
-        ClassLoader mwClassLoader = Mw.class.getClassLoader();
-        return mwClassLoader;
-    }
-
 
     @Test
     public void bb() {

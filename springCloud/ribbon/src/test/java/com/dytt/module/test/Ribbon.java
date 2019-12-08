@@ -8,17 +8,9 @@ public class Ribbon extends BaseTest {
 
     @Test
     public void hi() {
-        super.httpRequestOfGet("/hi");
+        super.httpRequestOfGET("/hi");
     }
 
 
-    @Override
-    protected ClassLoader getClassLoader() {
-        return Ribbon.class.getClassLoader();
-    }
 
-    @Override
-    protected String getIpHost() {
-        return "http://localhost:7000";
-    }
 }

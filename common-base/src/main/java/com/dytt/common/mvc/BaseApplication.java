@@ -18,7 +18,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableCaching
 @EnableAsync
 @EnableScheduling
-@MapperScan("com.dytt.module.*.dao")
+@MapperScan("com.dytt.module.*.mapper")
 @ComponentScan(basePackages = {"com.dytt.module","com.dytt.common"})
 @SpringBootApplication
 @EnableEurekaClient

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class DemoController extends BaseController<Demo> {
+public class DemoController extends BaseController{
     @Autowired
     DemoService demoService;
 

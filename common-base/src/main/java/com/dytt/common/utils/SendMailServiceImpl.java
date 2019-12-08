@@ -3,18 +3,20 @@ package com.dytt.common.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.dytt.common.exception.ServiceException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+@Component
 public class SendMailServiceImpl implements SendMailService {
 
-    @Autowired
-    JavaMailSender javaMailSender;
+
+    private JavaMailSender javaMailSender=new JavaMailSenderImpl();
 
     @Value("${spring.mail.username}")
     String mailFrom;
@@ -36,7 +38,7 @@ public class SendMailServiceImpl implements SendMailService {
         StackTraceElement[] stackTraceElements = exception.getStackTrace();
         for (StackTraceElement stackTraceElement : stackTraceElements) {
             String elementClassName = stackTraceElement.getClassName();
-            if (!StringUtils.isEmpty(elementClassName) && elementClassName.startsWith("com.cmss")) {
+            if (!StringUtils.isEmpty(elementClassName) && elementClassName.startsWith("com.dytt")) {
                 if (exceptionMsg == null) {
                     exceptionMsg = new JSONObject();
                     exceptionMsg.put("exceptionClass", exception.getClass());

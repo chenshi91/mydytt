@@ -13,26 +13,26 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-@Configuration
-public class MybatisPlusConfig {
-
-    @Bean
-    public MybatisSqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
-        return new MybatisSqlSessionFactoryBean(){{
-            setDataSource(dataSource);
-            setPlugins(new Interceptor[]{paginationInterceptor()});
-        }};
-    }
-
-    /**
-     * mybatis-plus分页插件
-     *
-     * @return
-     */
-    private PaginationInterceptor paginationInterceptor() {
-        return new PaginationInterceptor(){{
-            setDialectType("mysql");
-        }};
-    }
-
-}
+//@Configuration
+//public class MybatisPlusConfig {
+//
+//    @Bean
+//    public MybatisSqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
+//        return new MybatisSqlSessionFactoryBean(){{
+//            setDataSource(dataSource);
+//            setPlugins(new Interceptor[]{paginationInterceptor()});
+//        }};
+//    }
+//
+//    /**
+//     * mybatis-plus分页插件
+//     *
+//     * @return
+//     */
+//    private PaginationInterceptor paginationInterceptor() {
+//        return new PaginationInterceptor(){{
+//            setDialectType("mysql");
+//        }};
+//    }
+//
+//}

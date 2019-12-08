@@ -19,26 +19,18 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.cmss</groupId>
-            <artifactId>common-base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--&lt;!&ndash;排除这个slf4j-log4j12&ndash;&gt;-->
+        <!--<exclusions>-->
+            <!--<exclusion>-->
+                <!--<groupId>org.slf4j</groupId>-->
+                <!--<artifactId>slf4j-log4j12</artifactId>-->
+            <!--</exclusion>-->
+        <!--</exclusions>-->
+    <!--</dependency>-->
 
         <!--动态web页面jar-->
         <dependency>
@@ -47,13 +39,16 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <groupId>com.dytt.module</groupId>
+            <artifactId>service-movie-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.dytt.module</groupId>
+            <artifactId>service-user-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
 
     </dependencies>
 

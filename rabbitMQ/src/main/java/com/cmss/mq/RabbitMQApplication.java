@@ -8,7 +8,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableEurekaClient
 @SpringBootApplication
-@EnableAsync
 public class RabbitMQApplication {
 
     public static void main(String[] args) {

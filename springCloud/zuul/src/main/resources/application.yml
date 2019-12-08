@@ -13,10 +13,10 @@ zuul:
   routes:
     api-demo:
       path: /api-stream/**
-      serviceId: service-stream
+      serviceId: api-stream
     api-movie:
       path: /api-movie/**
-      serviceId: service-movie
+      serviceId: api-movie
   retryable: true #开启重试
 
 ribbon:

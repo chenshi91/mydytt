@@ -2,23 +2,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
     <parent>
         <artifactId>mydytt</artifactId>
         <groupId>com.cmss</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.dytt</groupId>
+    <groupId>com.dytt.module</groupId>
     <artifactId>service-modules</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>service-modules</name>
     <description>Demo project for Spring Boot</description>
 
     <modules>
         <module>service-demo</module>
         <module>service-user</module>
-        <module>service-test</module>
         <module>service-movie</module>
         <module>service-es</module>
+        <module>service-kafka</module>
+        <module>service-websocket</module>
+        <module>service-movie-model</module>
+        <module>service-user-model</module>
     </modules>
 
     <properties>

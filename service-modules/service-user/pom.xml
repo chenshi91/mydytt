@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.dytt</groupId>
+        <groupId>com.dytt.module</groupId>
         <artifactId>service-modules</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -18,26 +18,11 @@
             <artifactId>common-base</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
-            <groupId>com.mydytt</groupId>
-            <artifactId>service-bridge</artifactId>
+            <groupId>com.dytt.module</groupId>
+            <artifactId>service-user-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.qiniu/qiniu-java-sdk -->
-        <dependency>
-            <groupId>com.qiniu</groupId>
-            <artifactId>qiniu-java-sdk</artifactId>
-            <version>7.2.18</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>5.1.4.RELEASE</version>
-            <scope>compile</scope>
         </dependency>
 
     </dependencies>

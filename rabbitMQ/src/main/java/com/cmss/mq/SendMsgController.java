@@ -1,7 +1,6 @@
 /* created by chenshi at 2018-10-28 */
 package com.cmss.mq;
 
-import com.cmss.mq.receive.UserService;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,9 +11,6 @@ public class SendMsgController {
 
     @Autowired
     AmqpTemplate amqpTemplate;
-
-    @Autowired
-    UserService userService;
 
     @GetMapping(value = {"/send"})
     public String sendMsg() {
@@ -27,14 +23,5 @@ public class SendMsgController {
         }
         return msgResult.toString();
     }
-
-    @GetMapping(value = {"/hi"})
-    public String async() {
-        System.out.println("111111111111111111111111");
-        userService.yibu2();
-        System.out.println("4444444444444444444444444444");
-        return "xujiali";
-    }
-
 
 }

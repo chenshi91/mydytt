@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dytt.module.demo.mvc.dao.DemoMapper">
-    <!--<resultMap id="BaseResultMap" type="com.dytt.module.stream.mvc.Demo">-->
+    <!--<resultMap id="BaseResultMap" type="com.dytt.module.stream.api.Demo">-->
         <!--<id column="id" jdbcType="BIGINT" property="id"/>-->
         <!--<result column="create_date" jdbcType="TIMESTAMP" property="createDate"/>-->
         <!--<result column="create_by" jdbcType="VARCHAR" property="createBy"/>-->
@@ -25,7 +25,7 @@
         <!--delete from stream-->
         <!--where id = #{id,jdbcType=BIGINT}-->
     <!--</delete>-->
-    <!--<insert id="insert" parameterType="com.dytt.module.stream.mvc.Demo">-->
+    <!--<insert id="insert" parameterType="com.dytt.module.stream.api.Demo">-->
         <!--insert into stream (id, create_date, create_by,-->
         <!--update_date, update_by, name,-->
         <!--age, address, phone-->
@@ -35,7 +35,7 @@
         <!--#{age,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}-->
         <!--)-->
     <!--</insert>-->
-    <!--<insert id="insertSelective" parameterType="com.dytt.module.stream.mvc.Demo">-->
+    <!--<insert id="insertSelective" parameterType="com.dytt.module.stream.api.Demo">-->
         <!--insert into stream-->
         <!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
             <!--<if test="id != null">-->
@@ -96,7 +96,7 @@
             <!--</if>-->
         <!--</trim>-->
     <!--</insert>-->
-    <!--<update id="updateByPrimaryKeySelective" parameterType="com.dytt.module.stream.mvc.Demo">-->
+    <!--<update id="updateByPrimaryKeySelective" parameterType="com.dytt.module.stream.api.Demo">-->
         <!--update stream-->
         <!--<set>-->
             <!--<if test="createDate != null">-->
@@ -126,7 +126,7 @@
         <!--</set>-->
         <!--where id = #{id,jdbcType=BIGINT}-->
     <!--</update>-->
-    <!--<update id="updateByPrimaryKey" parameterType="com.dytt.module.stream.mvc.Demo">-->
+    <!--<update id="updateByPrimaryKey" parameterType="com.dytt.module.stream.api.Demo">-->
         <!--update stream-->
         <!--set create_date = #{createDate,jdbcType=TIMESTAMP},-->
         <!--create_by = #{createBy,jdbcType=VARCHAR},-->
