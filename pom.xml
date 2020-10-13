@@ -50,7 +50,7 @@
 
         <com.alibaba>1.1.41</com.alibaba>
         <org.jsoup>1.11.3</org.jsoup>
-        <junit>4.12</junit>
+        <junit>4.13.1</junit>
     </properties>
 
     <dependencies>
