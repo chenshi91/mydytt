@@ -48,7 +48,7 @@
 
         <hystrix-javanica>1.5.12</hystrix-javanica>
 
-        <com.alibaba>1.1.41</com.alibaba>
+        <com.alibaba>1.2.83</com.alibaba>
         <org.jsoup>1.11.3</org.jsoup>
         <junit>4.12</junit>
     </properties>
